@@ -1,0 +1,66 @@
+# robots.txt — SDAP Bespoke Metalworks
+# https://jeansbutton.pro/robots.txt
+# Last updated: 2026-04-17
+
+# ── Standard Search Engines (full access) ──────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /imgs/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ── AI Training & LLM Crawlers (allow indexing, block training) ───────────
+# We allow AI assistants to READ and CITE our content but not bulk-train on it.
+User-agent: GPTBot
+Allow: /
+Disallow: /imgs/
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# ── Internal / Non-public paths ────────────────────────────────────────────
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /temp/
+Disallow: /draft/
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /knowledge-base.md
+Disallow: /*?tracking=
+Disallow: /*?utm_
+Disallow: /*?ref=
+Disallow: /*?source=
+
+# ── Sitemap ────────────────────────────────────────────────────────────────
+Sitemap: https://jeansbutton.pro/sitemap.xml
+
+# ── LLM Content Index ──────────────────────────────────────────────────────
+# See https://jeansbutton.pro/llms.txt for AI-readable content map

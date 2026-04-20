@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+    <link rel="apple-touch-icon" href="imgs/favicon.png">
+    <title>Contact & Policies | SDAP Precision Hardware</title>
+    <meta name="description" content="SDAP Global Headquarters &mdash; B2B inquiry forms, manufacturing policies, and wholesale partnerships for denim hardware, bag fittings, cigar accessories, and fine jewelry metalworks.">
+    
+    <link rel="canonical" href="https://jeansbutton.pro/contact.html">
+    <!-- Fonts: preconnect + non-blocking load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap">
+    <link rel="stylesheet" href="sdap-new.css?v=4.3">
+    
+
+    <style>
+        /* Page-specific styling for the traditional vertical scroll layout */
+        body { background: #000; overflow-y: auto; color: #fff; padding-top: 120px; }
+        
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: radial-gradient(circle at 60% 40%, rgba(255,255,255,0.12) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1; pointer-events: none;
+        }
+        
+        .page-container {
+            max-width: 1400px; margin: 0 auto; padding: 0 var(--space-md) var(--space-xl);
+        }
+
+        .contact-hero { position: relative; margin-bottom: var(--space-lg); border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: var(--space-lg); }
+        .contact-hero h1 { font-family: var(--font-serif); font-size: clamp(3rem, 6vw, 6rem); font-style: italic; font-weight: 600; line-height: 1; letter-spacing: -0.02em; margin-bottom: var(--space-sm); }
+        .contact-hero p { font-family: var(--font-sans); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-muted); }
+
+        .scroll-down-indicator {
+            margin-top: var(--space-md);
+            display: inline-block;
+            font-family: var(--font-sans); font-size: 0.75rem; 
+            text-transform: uppercase; letter-spacing: 0.2em; 
+            color: rgba(255,255,255,0.8); 
+            animation: bounceY 2s infinite cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 0.5rem 1.5rem; border-radius: 50px;
+        }
+        @keyframes bounceY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr; gap: var(--space-xl); margin-bottom: var(--space-2xl);
+        }
+        @media (min-width: 1024px) {
+            .contact-grid { grid-template-columns: 1fr 1.5fr; }
+        }
+
+        /* Contact Details Panel */
+        .info-panel h2 { font-family: var(--font-sans); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-md); color: var(--text-light); }
+        .info-block { margin-bottom: var(--space-md); }
+        .info-block strong { display: block; font-family: var(--font-serif); font-size: var(--text-lg); font-style: italic; font-weight: 400; margin-bottom: var(--space-xs); }
+        .info-block p, .info-block a { font-family: var(--font-sans); font-size: var(--text-sm); color: rgba(255,255,255,0.7); line-height: 1.6; text-decoration: none; }
+        .info-block a:hover { color: #fff; text-decoration: underline; }
+
+        /* Inquiry Form (B2B Spec) */
+        .inquiry-panel {
+            background: rgba(0, 0, 0, 0.4); padding: var(--space-xl);
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 0; position: relative; overflow: hidden;
+        }
+        
+        /* Blueprint Scanner Details */
+        .inquiry-panel::before {
+            content: ''; position: absolute; top: -10px; left: 0; width: 100%; height: 2px;
+            background: rgba(255, 255, 255, 0.5); z-index: 10; pointer-events: none;
+            animation: scannerSweep 6s infinite linear;
+        }
+        @keyframes scannerSweep {
+            0% { top: -10px; opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { top: 100%; opacity: 0; }
+        }
+        
+        .hud-watermark {
+            position: absolute; bottom: 15px; right: 15px;
+            font-family: var(--font-mono); font-size: 0.45rem;
+            letter-spacing: 0.3em; color: rgba(255,255,255,0.15); pointer-events: none;
+            text-transform: uppercase;
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); margin-bottom: var(--space-md); }
+        @media (max-width: 768px) { .form-row { grid-template-columns: 1fr; } }
+        
+        .form-group select {
+            width: 100%; padding: var(--space-sm) 0; font-family: var(--font-sans); font-size: 1rem; color: #fff;
+            background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.3); outline: none; transition: border-color 0.3s;
+            appearance: none; -webkit-appearance: none;
+        }
+        .form-group select option { background: #111; color: #fff; }
+
+        /* Policies Section */
+        .policies-section { border-top: 1px solid rgba(255,255,255,0.2); padding-top: var(--space-xl); }
+        .policy-block { margin-bottom: var(--space-lg); max-width: 800px; }
+        .policy-block h3 { font-family: var(--font-sans); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; margin-bottom: var(--space-sm); padding-bottom: var(--space-xs); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .policy-block p { font-family: var(--font-sans); font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: var(--space-sm); }
+
+        /* Static Navbar override for this page */
+        .static-nav {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+            padding: var(--space-md) var(--space-lg);
+            background: rgba(0,0,0,0.8); backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .static-nav a { color: #fff; text-decoration: none; }
+    </style>
+</head>
+
+<body>
+
+    <div class="custom-cursor">
+        <div class="cursor-ring"></div>
+        <div class="cursor-dot"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="site-navbar">
+        <div class="nav-logo-group">
+            <a href="index.html" class="nav-logo magnetic" style="color: inherit; text-decoration: none;">S.D.A.P.</a>
+            <span class="nav-slogan">Bespoke Metalworks</span>
+        </div>
+        <a href="index.html" class="nav-menu magnetic hover-underline" style="color: inherit; text-decoration: none; margin-top: 5px;">BACK TO PORTFOLIO ✕</a>
+    </header>
+
+    <main class="page-container">
+        
+        <header class="contact-hero">
+            <h1>Global Connectivity.</h1>
+            <p>Headquarters & B2B Inquiries</p>
+        </header>
+
+        <div class="contact-grid">
+            
+            <!-- Left: HQ Details -->
+            <section class="info-panel">
+                <h2>Direct Channels</h2>
+                
+                <div class="info-block">
+                    <strong>Global Headquarters</strong>
+                    <p>Jiaxing, China <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-brass); opacity: 0.8; margin-left: 10px;">[GMT+8]</span></p>
+                </div>
+
+                <div class="info-block">
+                    <strong>South Asia Regional Hub</strong>
+                    <p>Faisalabad, Pakistan <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-brass); opacity: 0.8; margin-left: 10px;">[GMT+5]</span></p>
+                </div>
+                
+                <div class="info-block" style="margin-top: var(--space-lg);">
+                    <strong>S.D.A.P.</strong>
+                    <p style="font-style: italic; font-family: var(--font-serif); font-size: 1.1rem; color: #fff;">&ldquo;Structural Denim And Precision&rdquo;</p>
+                </div>
+
+                <div class="info-block" style="margin-top: var(--space-lg);">
+                    <strong>Digital Comms</strong>
+                    <div style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="#" class="social-btn whatsapp magnetic" onclick="cw(event)">WhatsApp</a>
+                        <a href="#" class="social-btn wechat magnetic" onclick="cc(event)">WeChat</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: Inquiry Form Table -->
+            <section class="inquiry-panel">
+                <form id="b2b-form" name="b2b-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="b2b-inquiry" />
+                    <p class="hidden" style="display:none;"><label>Don&rsquo;t fill this out if you're human: <input name="bot-field" /></label></p>
+                    <div class="hud-watermark">SEQ-ID: ALPHA_B2B_PROTOCOL</div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
+                            <label for="name">Representative Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="organization" placeholder=" " required autocomplete="organization">
+                            <label for="company">Brand / Corporation</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+                            <label for="email">Corporate Email</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest" style="position:absolute; top:-1.2rem; font-size:0.65rem; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:0.1em;">Technical Focus</label>
+                            <select id="interest" name="interest" required>
+                                <option value="" disabled selected>Primary Material Interest</option>
+                                <option value="zamak">Zamak 5 (Die-Cast Logic)</option>
+                                <option value="brass">H65 Structural Brass (Forged)</option>
+                                <option value="steel">316L Stainless Steel (Maritime)</option>
+                                <option value="aluminum">6061 Aerospace Aluminum</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="moq" style="position:absolute; top:-1.2rem; font-size:0.65rem; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:0.1em;">Production Volume</label>
+                            <select id="moq" name="moq" required>
+                                <option value="" disabled selected>Estimated Monthly Volume</option>
+                                <option value="sample">Proto / Sampling (Under 5,000 units)</option>
+                                <option value="low">Small Batch (5,000 - 25,000 units)</option>
+                                <option value="med">Mid-Scale (25,000 - 100,000 units)</option>
+                                <option value="high">Industrial (100,000+ units)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="project" placeholder=" ">
+                            <label for="project">Project / Collection Name (Optional)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: var(--space-md);">
+                        <textarea id="message" rows="4" placeholder=" " required style="width: 100%; background: transparent; color: #fff; border: none; border-bottom: 1px solid rgba(255,255,255,0.3); resize: none; font-family: var(--font-sans);"></textarea>
+                        <label style="position:relative; top:-20px; font-size:0.7rem; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.1em;">Technical Specifications & Material Requirements</label>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: var(--space-md);">
+                        <button type="submit" id="submit-btn" class="artistic-link magnetic" style="background: none; cursor: pointer; border: none; padding: 0;">
+                            <span class="btn-text">Submit Inquiry</span>
+                            <span class="arrow-circle">&rarr;</span>
+                        </button>
+                        <div id="form-loader" style="display:none; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.2em; color: var(--accent-brass); text-transform: uppercase;">
+                            Status: Initializing Protocol...
+                        </div>
+                        <a href="index.html" class="artistic-link magnetic" style="opacity: 0.5;">
+                            Return to Main Showroom 
+                            <span class="arrow-circle">←</span>
+                        </a>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+        <!-- Policies Section -->
+        <section class="policies-section">
+            <h2 style="font-family: var(--font-serif); font-size: var(--text-xl); font-style: italic; margin-bottom: var(--space-md); color:#fff;">Manufacturing Policies</h2>
+            
+            <div class="policy-block">
+                <h3>Minimum Order Quantity (MOQ)</h3>
+                <p>To maintain peak quality control and machine calibration standards, SDAP enforces a strict Minimum Order Quantity (MOQ) of 5,000&nbsp;units for standard catalogue hardware, and 15,000&nbsp;units for fully bespoke 5-axis CNC molds.</p>
+                <p>Prototypes and pre-production sampling are available exclusively to registered brand partners undergoing the onboarding process.</p>
+            </div>
+
+            <div class="policy-block">
+                <h3>Tolerances & Quality Assurance</h3>
+                <p>All structural denim hardware is engineered to a mechanical tolerance of &plusmn;0.01&nbsp;mm. Physical Vapor Deposition (PVD) and molecular anti-oxidation coatings are guaranteed to withstand class-4 industrial enzyme and stone-wash cycles without structural degradation.</p>
+            </div>
+
+            <div class="policy-block">
+                <h3>Intellectual Property & Non-Disclosure</h3>
+                <p>We respect the absolute confidentiality of our partners' designs. All bespoke mold schematics and engraved logo dies are strictly protected under mutual NDA and destroyed or securely vaulted upon collection termination.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-left">© 2026 SDAP &mdash; jeansbutton.pro · Bespoke Metalworks</div>
+        <div class="footer-center">
+            <a href="privacy-policy.html" class="footer-link magnetic">Privacy</a>
+            <span class="footer-divider">|</span>
+            <a href="cookie-policy.html" class="footer-link magnetic">Cookies</a>
+            <span class="footer-divider">|</span>
+            <a href="contact.html" class="footer-link magnetic">Contact</a>
+        </div>
+    </footer>
+
+    <div class="global-watermark">Bespoke Metalworks</div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         INDUSTRIAL MASTERED ORCHESTRATION (CONTACT ENGINE)
+         ════════════════════════════════════════════════════════════════ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. NATIVE STAGGERED ENTRANCE
+            [document.querySelector('.info-panel'), document.querySelector('.inquiry-panel')].forEach((el, i) => {
+                if (!el) return;
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `opacity 0.9s cubic-bezier(0.16,1,0.3,1) ${0.2 + i * 0.15}s, transform 0.9s cubic-bezier(0.16,1,0.3,1) ${0.2 + i * 0.15}s`;
+                requestAnimationFrame(() => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+            });
+
+            // 2. CURSOR HAPTIC SNAP
+            const cursor = document.querySelector('.custom-cursor');
+            const magneticElements = document.querySelectorAll('.magnetic, .nav-menu, input, select, textarea');
+            
+            magneticElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    if (cursor) cursor.classList.add('haptic-snap');
+                });
+                el.addEventListener('mouseleave', () => {
+                    if (cursor) cursor.classList.remove('haptic-snap');
+                });
+            });
+
+            // 3. B2B FORM PROTOCOL
+            const b2bForm = document.getElementById('b2b-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formLoader = document.getElementById('form-loader');
+
+            if (b2bForm) {
+                b2bForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    b2bForm.style.opacity = '0.5'; b2bForm.style.pointerEvents = 'none';
+                    formLoader.style.display = 'block';
+                    formLoader.textContent = "Status: Transmitting Data...";
+
+                    const formData = new FormData(b2bForm);
+                    fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams(formData).toString()
+                    })
+                    .then(() => {
+                        formLoader.textContent = "Status: Protocol Success";
+                        setTimeout(() => {
+                            window.location.href = 'success.html';
+                        }, 800);
+                    })
+                    .catch(() => {
+                        formLoader.textContent = "Status: System Error - Transmission Failed";
+                    });
+                });
+            }
+        });
+
+        // WhatsApp / Phone constructors
+        function cw(e) {
+            e.preventDefault();
+            const pt = ["86", "185", "7875", "5540"];
+            window.open("https://w" + "a.m" + "e/" + pt.join(''), "_blank");
+        }
+        function cc(e) {
+            e.preventDefault();
+            const pt = ["86", "185", "7875", "5540"];
+            window.location.href = "te" + "l:+" + pt.join('');
+        }
+
+        // Cookie logic
+        if (!localStorage.getItem('sdap_cookies_accepted')) {
+            setTimeout(() => {
+                document.getElementById('cookie-banner').classList.add('show');
+            }, 2500);
+        }
+        document.getElementById('accept-cookies').addEventListener('click', () => {
+            localStorage.setItem('sdap_cookies_accepted', 'true');
+            document.getElementById('cookie-banner').classList.remove('show');
+        });
+    </script>
+</body>
+</html>

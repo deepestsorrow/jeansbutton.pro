@@ -1,0 +1,24 @@
+{
+  "name": "sdap-landing",
+  "version": "1.0.0",
+  "description": "SDAP Premium Luxury Zipper Solutions - Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "luxury",
+    "zipper",
+    "fashion",
+    "manufacturer",
+    "landing-page"
+  ],
+  "author": "SDAP",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
