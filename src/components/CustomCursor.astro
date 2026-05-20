@@ -1,0 +1,59 @@
+---
+---
+<div class="custom-cursor">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        if (!isTouchDevice) {
+            const cursorDot = document.querySelector('.cursor-dot') as HTMLElement;
+            const cursorRing = document.querySelector('.cursor-ring') as HTMLElement;
+            const cursor = document.querySelector('.custom-cursor') as HTMLElement;
+            
+            if (cursorDot && cursorRing) {
+                let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+                let ringX = mouseX, ringY = mouseY;
+
+                document.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    cursorDot.style.left = mouseX + 'px';
+                    cursorDot.style.top = mouseY + 'px';
+                });
+
+                const cursorLoop = () => {
+                    ringX += (mouseX - ringX) * 0.12;
+                    ringY += (mouseY - ringY) * 0.12;
+                    cursorRing.style.left = ringX + 'px';
+                    cursorRing.style.top = ringY + 'px';
+                    requestAnimationFrame(cursorLoop);
+                };
+                requestAnimationFrame(cursorLoop);
+
+                const updateHoverHandlers = () => {
+                    document.querySelectorAll('a, .nav-menu, .nav-logo, .magnetic').forEach(el => {
+                        el.addEventListener('mouseenter', () => document.body.classList.add('hovering-link'));
+                        el.addEventListener('mouseleave', () => document.body.classList.remove('hovering-link'));
+                    });
+
+                    document.querySelectorAll('.magnetic, .nav-menu, .category-hero-caption h2').forEach(el => {
+                        el.addEventListener('mouseenter', () => {
+                            if (cursor) cursor.classList.add('haptic-snap');
+                        });
+                        el.addEventListener('mouseleave', () => {
+                            if (cursor) cursor.classList.remove('haptic-snap');
+                        });
+                    });
+                };
+
+                updateHoverHandlers();
+
+                // Re-run for dynamically added or rendered content if needed
+                document.addEventListener('astro:page-load', updateHoverHandlers);
+            }
+        }
+    });
+</script>

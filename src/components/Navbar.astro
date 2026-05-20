@@ -1,0 +1,119 @@
+---
+// Navbar.astro
+---
+<header class="site-navbar" id="site-navbar">
+    <div class="nav-logo-group magnetic">
+        <a href="/" class="nav-logo" style="color:inherit;text-decoration:none;">S.D.A.P.</a>
+        <div class="nav-slogan">Bespoke Metalworks</div>
+    </div>
+    <button class="nav-menu magnetic" id="menu-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="menu-overlay">MENU</button>
+</header>
+
+<div class="menu-overlay" id="menu-overlay" role="dialog" aria-modal="true" aria-label="Main Navigation">
+    <button class="menu-close magnetic" id="menu-close" aria-label="Close Menu">CLOSE &times;</button>
+    <nav class="menu-links">
+        <a href="/" class="magnetic">00. Showroom</a>
+        <a href="/tack-buttons" class="magnetic">01. Tack Buttons</a>
+        <a href="/rivets" class="magnetic">02. Copper Rivets</a>
+        <a href="/patches" class="magnetic">03. Identifiers</a>
+        <a href="/bags" class="magnetic">04. Bag Hardware</a>
+        <a href="/cigars" class="magnetic">05. Cigar Accessories</a>
+        <a href="/jewelry" class="magnetic">06. Fine Jewelry</a>
+        <a href="/#partnerships" class="magnetic">07. Partnerships</a>
+    </nav>
+    <div class="menu-footer" style="position: absolute; bottom: 5vh; width: 100%; text-align: center; color: rgba(255,255,255,0.4); font-size: 0.75rem; letter-spacing: 0.1em; display: flex; flex-direction: column; align-items: center; gap: 12px; text-transform: uppercase;">
+        <div style="display: flex; gap: 30px;">
+            <a href="/privacy-policy" class="magnetic hover-underline" style="color: inherit; text-decoration: none;">Privacy</a>
+            <a href="/cookie-policy" class="magnetic hover-underline" style="color: inherit; text-decoration: none;">Cookies</a>
+            <a href="/contact" class="magnetic hover-underline" style="color: inherit; text-decoration: none;">Global Contact</a>
+        </div>
+        <div style="opacity: 0.5; font-size: 0.65rem; letter-spacing: 0.15em;">&copy; 2026 -SDAP-THE TRIM GENIUS BESPOKE METALWORKS</div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Navbar scroll behavior
+        const navbar = document.getElementById('site-navbar');
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (navbar) {
+                        navbar.classList.toggle('scrolled', window.scrollY > 80);
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Menu Overlay toggles
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const menuLinks = document.querySelectorAll('.menu-links a');
+
+        const openMenu = () => {
+            if (menuOverlay && menuToggle) {
+                menuOverlay.classList.add('open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+                menuLinks.forEach((link, i) => {
+                    const l = link as HTMLElement;
+                    l.style.transitionDelay = `${0.15 + i * 0.06}s`;
+                    l.style.opacity = '1';
+                    l.style.transform = 'translateY(0)';
+                });
+                const firstLink = menuLinks[0] as HTMLElement;
+                firstLink?.focus();
+            }
+        };
+
+        const closeMenu = () => {
+            if (menuOverlay && menuToggle) {
+                menuOverlay.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuLinks.forEach(link => {
+                    const l = link as HTMLElement;
+                    l.style.transitionDelay = '0s';
+                    l.style.opacity = '0';
+                    l.style.transform = 'translateY(20px)';
+                });
+            }
+        };
+
+        if (menuToggle) menuToggle.onclick = openMenu;
+        if (menuClose) menuClose.onclick = closeMenu;
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (!href) return;
+
+                // Handle hash navigation on the homepage
+                if (href.startsWith('/#') || href === '/') {
+                    const cleanPath = window.location.pathname.replace(/\/$/, "");
+                    if (cleanPath === "" || cleanPath === "/index.html") {
+                        e.preventDefault();
+                        closeMenu();
+                        const targetId = href === '/' ? 'hero' : href.replace('/#', '');
+                        const target = document.getElementById(targetId);
+                        if (target) {
+                            const offset = target.getBoundingClientRect().top + window.scrollY - 80;
+                            window.scrollTo({ top: offset, behavior: 'smooth' });
+                        }
+                    }
+                }
+            });
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && menuOverlay && menuOverlay.classList.contains('open')) {
+                closeMenu();
+            }
+        });
+    });
+</script>

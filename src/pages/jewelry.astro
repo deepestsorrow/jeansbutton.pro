@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SpecificationEngine from '../components/SpecificationEngine.astro';
+
+const title = "Fine Jewelry Metalworks | SDAP Bespoke Metalworks";
+const description = "SDAP Platinum 950 prong settings & 18K gold vermeil components. Zaratsu hand-polishing, 0.001 mm gemstone culet tolerance, ISO 9202 hallmarked.";
+---
+
+<Layout title={title} description={description} isHome={false}>
+    <main class="editorial-flow">
+        <section class="category-section" id="jewelry">
+            <div class="category-hero">
+                <img src="/imgs/hero_macro_fixed.webp" alt="Perfectly Symmetrical Solitaire Diamond Ring Macro" class="category-hero-img" loading="lazy" width="1920" height="1080">
+                <div class="hero-scan-line" aria-hidden="true"></div>
+                <div class="hero-hud-coordinates" aria-label="System Status">
+                    <span>ZARATSU POLISH: CALIBRATED</span>
+                    <span>FACET GAP: &lt;0.005MM</span>
+                    <span>PT 950 SUBSTRATE</span>
+                </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">06</span>
+                    <h2>Fine Jewelry Metalworks</h2>
+                    <p>Abstract Geometry &amp; Micro-Faceting Technology</p>
+                </div>
+            </div>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Platinum 950 Ductility & Vickers Calibrations</h3>
+                        <p>Our fine jewelry metalworks utilize <strong>Platinum 950</strong> for structural prongs, choosing its superior ductility (Vickers ~125 HV) to securely cradle high-value stones against impact without snapping. For high-rigidity pav&eacute; bands, we utilize <strong>HP-Finished 18k Gold</strong> (HV ~220) to prevent band ovaling. Every surface is finished using <strong>Zaratsu blade-polishing</strong> for distortion-free reflection indices.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Jewelry Specifications">
+                        <li>Metals <span>Platinum 950 / 18k Palladium-White / 18k Yellow Gold</span></li>
+                        <li>Prong Engineering <span>Dual-Axis Claws / Soft-Paws Seating</span></li>
+                        <li>Setting Logic <span>Microscope-Guided Pavé (Sub-Micron Precision)</span></li>
+                        <li>Hardness Index <span>Calibrated 125&ndash;230 HV (Substrate Specific)</span></li>
+                        <li>Finish Tech <span>Hand-Laid 0.5-Micron PVD / Zaratsu Mirror Polish</span></li>
+                        <li>Stone Security <span>4-Point Prongs with Reinforced Galleries</span></li>
+                        <li>Precision Gap <span>&plusmn;0.005mm Algorithmic Faceting</span></li>
+                    </ul>
+
+                    <!-- Material Telemetry Configurator -->
+                    <SpecificationEngine type="jewelry" />
+
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>Oeko-Tex Standard 100</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Lab-Grown Gem Integrations</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What represents the cutting edge in jewelry components today?</strong>
+                            <p>A: Hybrid components. The marriage of ultra-precision CNC milled titanium frameworks paired with ethically sourced, lab-grown secondary stone integrations is highly sought after by progressive couture labels.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Do you offer ethical sourcing certification?</strong>
+                            <p>A: Absolutely. All raw metal materials are conflict-free and adhere strictly to global ethical sourcing guidelines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

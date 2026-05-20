@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SpecificationEngine from '../components/SpecificationEngine.astro';
+
+const title = "Tack Buttons & Metal Shanks | SDAP Bespoke Metalworks";
+const description = "SDAP precision-engineered tack buttons — Zamak 5 die-cast & H65 Brass forged. PVD 2500–3000 HV coating, Oeko-Tex 100, ASTM B117 certified. Soft-touch TPU overmoulding available.";
+---
+
+<Layout title={title} description={description} isHome={false}>
+    <main class="editorial-flow">
+        <section class="category-section" id="tack-buttons">
+            <div class="category-hero">
+                <img src="/imgs/dark_button_opt.jpg" alt="Matte Black Tack Button" class="category-hero-img" loading="lazy" width="1920" height="1080">
+                <div class="hero-scan-line" aria-hidden="true"></div>
+                <div class="hero-hud-coordinates" aria-label="System Status">
+                    <span>TOLERANCE &plusmn;0.01MM</span>
+                    <span>PVD SCAN: 100%</span>
+                    <span>CALIBRATION: ACTIVE</span>
+                </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">01</span>
+                    <h2>Tack Buttons &amp; Shanks</h2>
+                    <p>Aerospace-grade zinc alloys &amp; PVD Anti-oxidation</p>
+                </div>
+            </div>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Detachable Monomaterial Framework</h3>
+                        <p>Unlike traditional electroplated rivets, our new line of Tack Buttons feature a detachable mono-material framework designed explicitly for the circular economy. The button can be unscrewed via a proprietary micro-thread, allowing the denim to be fully recycled without the need to cut out the hardware.</p>
+                    </div>
+                    <div class="tech-content-block">
+                        <h3>Molecular PVD Bonding & Hybrid Alloys</h3>
+                        <p>Our buttons are engineered for heavy-duty denim weights exceeding 16oz. We utilize <strong>High-Vacuum PVD (Physical Vapor Deposition)</strong>, establishing a near-indestructible anti-oxidation barrier. This process bonds the finish at a molecular level, providing a Vickers Hardness (HV) rating 10x superior to standard electroplating. The base substrates consist of <strong>Zamak 5 die-castings</strong> for complex branding and <strong>H65 Brass</strong> for heritage-grade structural integrity.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Tack Button Specifications" data-reveal="scanner">
+                        <li>Substrate <span>Zamak 5 (Die-Cast) / H65 Brass (Forged)</span></li>
+                        <li>Hardness Profile <span>2500&ndash;3000 HV (PVD Molecular Coating)</span></li>
+                        <li>Surface Durability <span>ASTM B117 - 120h High-Vaccum Pass</span></li>
+                        <li>Wash Resistance <span>Industrial Stone-Wash & Enzyme (50+ Cycles)</span></li>
+                        <li>Tensile Strength <span>&gt;850&nbsp;N (Reinforced Shank Core)</span></li>
+                        <li>Certification <span>Oeko-Tex Standard 100 Class I</span></li>
+                        <li>Precision <span>&plusmn;0.01&nbsp;mm High-Tolerance Tooling</span></li>
+                        <li>Surface Option <span>Soft-Touch TPU/TPE Overmould (Skin-Safe)</span></li>
+                        <li>Overmould Thickness <span>&plusmn;0.02&nbsp;mm Precision Bond Tolerance</span></li>
+                    </ul>
+
+                    <div class="tech-content-block">
+                        <h3>Soft-Touch Rubber Overmoulding &mdash; Skin-Grade Haptics</h3>
+                        <p>For labels demanding a premium <strong>tactile identity</strong>, we offer a full <strong>TPU / TPE Rubber Overmoulding</strong> process applied directly to the exposed button face. The result is a velvety, skin-feeling surface indistinguishable from the premium soft-touch found in luxury consumer electronics &mdash; zero cold metallic contact, pure warmth on touch. The rubber layer is precision-moulded at <strong>&plusmn;0.02&nbsp;mm thickness tolerance</strong>, ensuring a flush, bubble-free bond to the metal substrate beneath. Available in matte black, stone grey, bone white, and fully custom bespoke RAL colorways. Certified skin-safe to <strong>GB/T 17592 and OEKO-TEX&reg; Standard 100</strong>.</p>
+                    </div>
+
+                    <!-- Material Telemetry Configurator -->
+                    <SpecificationEngine type="button" />
+
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>Ellen MacArthur Foundation Circular</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Detachable &amp; Screw-Off Hardware</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>2026 Trend</span>
+                            <strong>QR-Encoded Traceability Buttons</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Finish Frontier</span>
+                            <strong>Soft-Touch TPU Overmould</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What is the defining trend for denim hardware at the luxury level?</strong>
+                            <p>A: High-end labels are redesigning garments for "End-of-Life" (EOL) circularity. Screw-on/screw-off hardware is becoming mandatory so denim can be shredded and recycled instantly.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Are the PVD coatings susceptible to chipping?</strong>
+                            <p>A: No. Unlike paint or standard electroplating, PVD is molecularly bonded to the alloy lattice, making it impervious to industrial stone-washing and standard chipping.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Do you offer a rubber or soft-touch coating on the button face?</strong>
+                            <p>A: Yes. Our TPU/TPE Rubber Overmoulding wraps the exposed face in a skin-grade, velvety rubber finish &mdash; the same tactile technology used in luxury consumer electronics. It is warm to touch, completely matte, wash-stable across 50+ industrial cycles, and available in any bespoke RAL colorway.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Can you embed digital traceability into a button?</strong>
+                            <p>A: Yes. We offer a micro-engraved QR code on the underside shank that links to a digital product passport &mdash; providing end consumers and recyclers with full material composition, origin, and end-of-life instructions. This is rapidly becoming a compliance requirement for EU textile regulations post-2026.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

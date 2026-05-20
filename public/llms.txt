@@ -1,0 +1,41 @@
+# SDAP (S&D Asia Pacific)
+> Bespoke Luxury Metalworks — Precision Industrial Hardware | https://jeansbutton.pro/
+
+SDAP is a Jiaxing-based bespoke hardware manufacturer (est. 2007) supplying precision-engineered metal components to European luxury fashion houses, Swiss motorsport leaders, and premium denim labels worldwide. Our manufacturing capabilities span 5-axis CNC milling, High-Vacuum PVD coating, cold-forging, and soft-touch TPU overmoulding across six core product verticals.
+
+## Product Portfolio
+
+- [Tack Buttons & Shanks](https://jeansbutton.pro/tack-buttons.html): Zamak 5 die-cast and H65 Brass forged tack buttons. High-Vacuum PVD coating (2500–3000 HV), ASTM B117 120h pass, Oeko-Tex Standard 100 Class I, detachable mono-material for circular economy compliance. Optional soft-touch TPU/TPE rubber overmoulding with skin-grade GB/T 17592 certification.
+- [Copper Rivets & Burrs](https://jeansbutton.pro/rivets.html): Cold-forged H65 Structural Brass with 35% elongation index (ASTM E8). 5-axis CNC micro-milling (±0.005 mm), ISO 9227 salt spray 96h pass, >850 N load rating.
+- [Structural Identifiers / Patches](https://jeansbutton.pro/patches.html): Cellulose Jacron, vulcanized cork, and Mycelium (mushroom) leather substrates. 100-ton hydraulic cold-press embossing, ISO 3377-2 tear resistance, 600 DPI laser etching, PETA-approved vegan.
+- [Luxury Bag Hardware](https://jeansbutton.pro/bags.html): AISI 316L marine-grade stainless steel clasps and D-rings. Electropolished mirror finish, corrosion-rated IP67 equivalent, 2000 N pull-strength tested.
+- [Cigar Humidor Accessories](https://jeansbutton.pro/cigars.html): 6061-T6 aerospace aluminum hinges and hermetic brass locks. ±0.01 mm precision tolerancing, 99.5% airtight RH seal integrity, cedar-compatible passivation.
+- [Fine Jewelry Metalworks](https://jeansbutton.pro/jewelry.html): Platinum 950 prong settings and 18K gold vermeil components. Zaratsu hand-polishing, 0.001 mm gemstone culet tolerance, hallmarked to ISO 9202.
+
+## Technology Capabilities
+- High-Vacuum PVD (Physical Vapor Deposition): molecularly bonded finish, 10× superior to electroplating, zero liquid discharge
+- 5-Axis CNC Micro-Milling: ±0.005 mm tolerance, bespoke monogramming
+- Cold-Forging: H65 Brass 35% elongation index, structural integrity for heavyweight denim
+- Soft-Touch TPU/TPE Overmoulding: skin-grade tactile surface, ±0.02 mm thickness tolerance
+- Zaratsu Mirror Polishing: Japanese hand-finishing for fine jewelry components
+- Circular Economy Hardware: detachable mono-material tack buttons; conforms to Ellen MacArthur Foundation standards
+
+## Company
+- Founded: 2007
+- Headquarters: Jiaxing, Zhejiang, China
+- Markets: European luxury fashion, Swiss motorsport, premium denim, cigar lifestyle, fine jewelry
+- Certifications: Oeko-Tex Standard 100, ISO 9227, ASTM B117, PETA-approved vegan, GB/T 17592
+
+## Site Architecture (Hub & Spoke SEO Pyramid)
+- Hub: https://jeansbutton.pro/ (main showroom)
+- Spokes: /tack-buttons.html, /rivets.html, /patches.html, /bags.html, /cigars.html, /jewelry.html
+- Contact: https://jeansbutton.pro/contact.html
+- Sitemap: https://jeansbutton.pro/sitemap.xml
+
+## Optional: Full Detail Pages
+- https://jeansbutton.pro/tack-buttons.html
+- https://jeansbutton.pro/rivets.html
+- https://jeansbutton.pro/patches.html
+- https://jeansbutton.pro/bags.html
+- https://jeansbutton.pro/cigars.html
+- https://jeansbutton.pro/jewelry.html

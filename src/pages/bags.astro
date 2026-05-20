@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SpecificationEngine from '../components/SpecificationEngine.astro';
+
+const title = "Luxury Bag Hardware | SDAP Bespoke Metalworks";
+const description = "SDAP AISI 316L marine-grade stainless steel bag clasps, D-rings & turn-locks. Electropolished mirror finish, IP67 corrosion-rated, 2000 N pull-strength tested.";
+---
+
+<Layout title={title} description={description} isHome={false}>
+    <main class="editorial-flow">
+        <section class="category-section" id="bags">
+            <div class="category-hero">
+                <img src="/imgs/bag_clasp_opt.jpg" alt="Luxury Bag Hardware Clasp" class="category-hero-img" loading="lazy" width="1920" height="1080">
+                <div class="hero-scan-line" aria-hidden="true"></div>
+                <div class="hero-hud-coordinates" aria-label="System Status">
+                    <span>LOAD &gt;1500N</span>
+                    <span>ASTM B117: COMPLIANT</span>
+                    <span>HP BRASS CORE</span>
+                </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">04</span>
+                    <h2>High-End Bag Hardware</h2>
+                    <p>Precision Milled Clasps &amp; Heavy-Duty Zippers</p>
+                </div>
+            </div>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Ergonomic Kinematics & Surface Hardness</h3>
+                        <p>Standardized on <strong>AISI 316L Stainless Steel</strong> and <strong>HP Solid Brass</strong>, our bag hardware is designed for the high-end mobility of modern luxury. We utilize <strong>High-Vacuum Sputtering (PVD)</strong> to achieve a <strong>Vickers Hardness (HV) of 450+</strong>, establishing a near-indestructible ceramic barrier. Our finishes are benchmarked against **ASTM B117 Neutral Salt Spray** (120 Hours) and **ISO 4524 Adhesion standards** to prevent environmental pitting and micro-striation.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Bag Hardware Specifications" data-reveal="scanner">
+                        <li>Base Alloys <span>AISI 316L Stainless / HP Brass / Grade 5 Titanium</span></li>
+                        <li>Surface Hardness <span>450-600 HV (PVD Molecular Bond)</span></li>
+                        <li>Salt Spray Rating <span>ASTM B117 - 120 Hours (Grade 10)</span></li>
+                        <li>Abrasion Resistance <span>15x superior to standard electroplating</span></li>
+                        <li>Load Rating <span>&gt;1500&nbsp;N Tensile Strength per Clasp</span></li>
+                        <li>Acoustic Logic <span>Tuned Internal Damping (Silent Operation)</span></li>
+                        <li>Size Precision <span>Micron-calibrated friction fits (&plusmn;0.005mm)</span></li>
+                    </ul>
+
+                    <!-- Material Telemetry Configurator -->
+                    <SpecificationEngine type="bag" />
+
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>Oeko-Tex 100 &amp; REACH</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Eco-Titanium Structures</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What are the current trends in bag hardware?</strong>
+                            <p>A: We are seeing a massive shift towards architecturally complex geometric closures using lightweight, eco-friendly Titanium alloys rather than dense steel.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Are the finishes resistant to saltwater?</strong>
+                            <p>A: Yes. The PVD lattice passes 48-hour continuous salt-spray tests, maintaining physical integrity in marine-environment luxury applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

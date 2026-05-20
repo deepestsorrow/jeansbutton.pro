@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SpecificationEngine from '../components/SpecificationEngine.astro';
+
+const title = "Cigar Humidor Hardware | SDAP Bespoke Metalworks";
+const description = "SDAP 6061-T6 aerospace aluminum humidor hinges & hermetic brass locks. ±0.01 mm precision, 99.5% airtight RH seal, cedar-compatible passivation finish.";
+---
+
+<Layout title={title} description={description} isHome={false}>
+    <main class="editorial-flow">
+        <section class="category-section" id="cigars">
+            <div class="category-hero">
+                <img src="/imgs/humidor_hinge_opt.jpg" alt="Precision Milled Circular Humidor Hinge" class="category-hero-img" loading="lazy" width="1920" height="1080">
+                <div class="hero-scan-line" aria-hidden="true"></div>
+                <div class="hero-hud-coordinates" aria-label="System Status">
+                    <span>CNC TOLERANCE: &plusmn;0.005MM</span>
+                    <span>HERMETIC SEAL: ACTIVE</span>
+                    <span>AL 6061-T6</span>
+                </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">05</span>
+                    <h2>Cigar &amp; Humidor Precision</h2>
+                    <p>Precise Hermetic Hinges &amp; Custom Lock Escutcheons</p>
+                </div>
+            </div>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Precision 6061 Forged Milling</h3>
+                        <p>Our bespoke humidor hinges and locks are CNC-milled from solid blocks of <strong>6061-T6 Aerospace Aluminum</strong> or <strong>H65 HP Brass</strong>. Machined to absolute tolerances of &plusmn;0.005", these components provide the structural rigidity required for permanent seal integrity. We utilize <strong>Fluorocarbon (Viton) gaskets</strong> to ensure a controlled air-exchange rate without VOC off-gassing, protecting the organic profile of the tobacco.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Humidor Specifications" data-reveal="scanner">
+                        <li>Substrate <span>Aerospace 6061-T6 Aluminum / H65 HP Brass</span></li>
+                        <li>Machining <span>High-Precision CNC (&plusmn;0.005mm Tolerance)</span></li>
+                        <li>Friction Index <span>0.04μ (Teflon-Infused Pivot)</span></li>
+                        <li>Gasket Material <span>Medical-Grade Silicone / Viton Gaskets</span></li>
+                        <li>Seal Tension <span>Calibrated Hermetic Micro-Climate Compression</span></li>
+                        <li>Surface Integrity <span>Passivated Type II Anodization / PVD Gold</span></li>
+                        <li>Acoustic Metric <span>Damped "Luxury-Thud" Closing Logic</span></li>
+                    </ul>
+
+                    <!-- Material Telemetry Configurator -->
+                    <SpecificationEngine type="cigar" />
+
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>Oeko-Tex Standard 100</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Carbon-inlay Escutcheons</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What trends are dominating humidor hardware?</strong>
+                            <p>A: High-net-worth clients prefer stealth-wealth aesthetics. Brushed rhodium and matte gold with subtle carbon-fiber inlays have overtaken high-gloss finishes entirely.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Does the metal interfere with Spanish Cedar aroma?</strong>
+                            <p>A: Not at all. We utilize pure brass free of VOC-off-gassing coatings, preventing any disruption to the organic aroma of the cedar wood.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

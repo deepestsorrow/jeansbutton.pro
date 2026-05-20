@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Contact & Policies | SDAP Precision Hardware";
+const description = "SDAP Global Headquarters — B2B inquiry forms, manufacturing policies, and wholesale partnerships for denim hardware, bag fittings, cigar accessories, and fine jewelry metalworks.";
+---
+
+<Layout title={title} description={description} isHome=false>
+    <main class="page-container">
+        <header class="contact-hero">
+            <h1>Global Connectivity.</h1>
+            <p>Headquarters & B2B Inquiries</p>
+        </header>
+
+        <div class="contact-grid">
+            
+            <!-- Left: HQ Details -->
+            <section class="info-panel">
+                <h2>Direct Channels</h2>
+                
+                <div class="info-block">
+                    <strong>Global Headquarters</strong>
+                    <p>Jiaxing, China <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-brass); opacity: 0.8; margin-left: 10px;">[GMT+8]</span></p>
+                </div>
+
+                <div class="info-block" style="margin-top: var(--space-md);">
+                    <strong>Registered Legal Entity</strong>
+                    <div style="margin-top: 0.5rem; display: block;">
+                        <img src="/imgs/company_name.png" alt="" style="height: 16px; width: auto; display: block; opacity: 0.95; pointer-events: none; -webkit-user-drag: none; user-select: none;" />
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <strong>South Asia Regional Hub</strong>
+                    <p>Faisalabad, Pakistan <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-brass); opacity: 0.8; margin-left: 10px;">[GMT+5]</span></p>
+                </div>
+                
+                <div class="info-block" style="margin-top: var(--space-lg);">
+                    <strong>S.D.A.P.</strong>
+                    <p style="font-style: italic; font-family: var(--font-serif); font-size: 1.1rem; color: #fff;">&ldquo;Structural Denim And Precision&rdquo;</p>
+                </div>
+
+                <div class="info-block" style="margin-top: var(--space-lg);">
+                    <strong>Digital Comms</strong>
+                    <div style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="#" class="social-btn whatsapp magnetic" onclick="cw(event)">WhatsApp</a>
+                        <a href="#" class="social-btn wechat magnetic" onclick="cc(event)">WeChat</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: Inquiry Form Table -->
+            <section class="inquiry-panel">
+                <form id="b2b-form" name="b2b-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="b2b-inquiry" />
+                    <p class="hidden" style="display:none;"><label>Don&rsquo;t fill this out if you're human: <input name="bot-field" /></label></p>
+                    <div class="hud-watermark">SEQ-ID: ALPHA_B2B_PROTOCOL</div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
+                            <label for="name">Representative Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="organization" placeholder=" " required autocomplete="organization">
+                            <label for="company">Brand / Corporation</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+                            <label for="email">Corporate Email</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="interest" name="interest" required>
+                                <option value="" disabled selected>Primary Material Interest</option>
+                                <option value="zamak">Zamak 5 (Die-Cast Logic)</option>
+                                <option value="brass">H65 Structural Brass (Forged)</option>
+                                <option value="steel">316L Stainless Steel (Maritime)</option>
+                                <option value="aluminum">6061 Aerospace Aluminum</option>
+                            </select>
+                            <label for="interest" class="static-label">Technical Focus</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select id="moq" name="moq" required>
+                                <option value="" disabled selected>Estimated Monthly Volume</option>
+                                <option value="sample">Proto / Sampling (Under 5,000 units)</option>
+                                <option value="low">Small Batch (5,000 - 25,000 units)</option>
+                                <option value="med">Mid-Scale (25,000 - 100,000 units)</option>
+                                <option value="high">Industrial (100,000+ units)</option>
+                            </select>
+                            <label for="moq" class="static-label">Production Volume</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="project" placeholder=" ">
+                            <label for="project">Project / Collection Name (Optional)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: var(--space-lg);">
+                        <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="message">Technical Specifications & Material Requirements</label>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: var(--space-md);">
+                        <button type="submit" id="submit-btn" class="artistic-link magnetic" style="background: none; cursor: pointer; border: none; padding: 0;">
+                            <span class="btn-text">Submit Inquiry</span>
+                            <span class="arrow-circle">&rarr;</span>
+                        </button>
+                        <div id="form-loader" style="display:none; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.2em; color: var(--accent-brass); text-transform: uppercase;">
+                            Status: Initializing Protocol...
+                        </div>
+                        <a href="/" class="artistic-link magnetic" style="opacity: 0.5;">
+                            Return to Main Showroom 
+                            <span class="arrow-circle">←</span>
+                        </a>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+        <!-- Policies Section -->
+        <section class="policies-section">
+            <h2 style="font-family: var(--font-serif); font-size: var(--text-xl); font-style: italic; margin-bottom: var(--space-md); color:#fff;">Manufacturing Policies</h2>
+            
+            <div class="policy-block">
+                <h3>Minimum Order Quantity (MOQ)</h3>
+                <p>To maintain peak quality control and machine calibration standards, SDAP enforces a strict Minimum Order Quantity (MOQ) of 5,000&nbsp;units for standard catalogue hardware, and 15,000&nbsp;units for fully bespoke 5-axis CNC molds.</p>
+                <p>Prototypes and pre-production sampling are available exclusively to registered brand partners undergoing the onboarding process.</p>
+            </div>
+
+            <div class="policy-block">
+                <h3>Tolerances & Quality Assurance</h3>
+                <p>All structural denim hardware is engineered to a mechanical tolerance of &plusmn;0.01&nbsp;mm. Physical Vapor Deposition (PVD) and molecular anti-oxidation coatings are guaranteed to withstand class-4 industrial enzyme and stone-wash cycles without structural degradation.</p>
+            </div>
+
+            <div class="policy-block">
+                <h3>Intellectual Property & Non-Disclosure</h3>
+                <p>We respect the absolute confidentiality of our partners' designs. All bespoke mold schematics and engraved logo dies are strictly protected under mutual NDA and destroyed or securely vaulted upon collection termination.</p>
+            </div>
+        </section>
+    </main>
+</Layout>

@@ -1,0 +1,62 @@
+---
+interface Props {
+    isHome?: boolean;
+}
+
+const { isHome = false } = Astro.props;
+---
+<footer class={isHome ? "site-footer site-footer--editorial" : "site-footer"} style={isHome ? "" : "flex-direction: column; gap: 1.5rem; padding: 2.5rem var(--space-lg);"}>
+    {isHome ? (
+        <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <span style="font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; color: #fff;">Ready to Engineer Together?</span>
+                <span style="font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4);">B2B Inquiry &mdash; Response within 24h</span>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <a href="/contact" class="footer-cta-btn">Request a Quote &rarr;</a>
+                <a href="#" class="social-btn whatsapp" id="wa-btn" style="font-size: 0.65rem;">WhatsApp</a>
+                <a href="#" class="social-btn wechat" id="wc-btn" style="font-size: 0.65rem;">WeChat</a>
+            </div>
+        </div>
+    ) : (
+        <div style="width:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+            <a href="/" style="font-family:var(--font-serif);font-style:italic;font-size:1.05rem;color:#fff;text-decoration:none;opacity:0.8;">&larr; Back to Showroom</a>
+            <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.5rem;background:#fff;color:#000;font-family:var(--font-sans);font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.2em;text-decoration:none;border-radius:50px;transition:all 0.3s;" onmouseover="this.style.background='transparent';this.style.color='#fff';this.style.boxShadow='0 0 20px rgba(255,255,255,0.2)';" onmouseout="this.style.background='#fff';this.style.color='#000';this.style.boxShadow='none';">Request a Quote &rarr;</a>
+        </div>
+    )}
+    
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+        <div class="footer-left">&copy; 2026 -SDAP-THE TRIM GENIUS BESPOKE METALWORKS</div>
+        <div class="footer-center">
+            <a href="/privacy-policy" class="footer-link magnetic">Privacy</a>
+            <span class="footer-divider">|</span>
+            <a href="/cookie-policy" class="footer-link magnetic">Cookies</a>
+            <span class="footer-divider">|</span>
+            <a href="/contact" class="footer-link magnetic">Contact</a>
+            <span class="footer-divider">|</span>
+            <a href="/sitemap.xml" class="footer-link magnetic">Sitemap</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const waBtn = document.getElementById('wa-btn');
+        const wcBtn = document.getElementById('wc-btn');
+        const phoneParts = ["86", "185", "7875", "5540"];
+
+        if (waBtn) {
+            waBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.open("https://wa.me/" + phoneParts.join(''), "_blank");
+            });
+        }
+
+        if (wcBtn) {
+            wcBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = "tel:+" + phoneParts.join('');
+            });
+        }
+    });
+</script>

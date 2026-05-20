@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SpecificationEngine from '../components/SpecificationEngine.astro';
+
+const title = "Copper Rivets & Burrs | SDAP Bespoke Metalworks";
+const description = "SDAP cold-forged H65 Brass copper rivets — 35% elongation index, ISO 9227 96h salt spray, >850 N tensile strength. 5-axis CNC micro-milling to ±0.005 mm.";
+---
+
+<Layout title={title} description={description} isHome={false}>
+    <main class="editorial-flow">
+        <section class="category-section" id="rivets">
+            <div class="category-hero">
+                <img src="/imgs/copper_rivet_opt.jpg" alt="Copper Denim Rivet" class="category-hero-img" loading="lazy" width="1920" height="1080">
+                <div class="hero-scan-line" aria-hidden="true"></div>
+                <div class="hero-hud-coordinates" aria-label="System Status">
+                    <span>PRESSURE: 50T</span>
+                    <span>DUCTILITY: HIGH</span>
+                    <span>ISO 9227: PASS</span>
+                </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">02</span>
+                    <h2>CNC-Milled Burrs &amp; Rivets</h2>
+                    <p>5-Axis CNC Milling &amp; Structural Enforcement</p>
+                </div>
+            </div>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Cold-Forged H65 Brass Integrity & Ductility</h3>
+                        <p>Our rivets are cold-forged from premium <strong>H65 Structural Brass</strong>, ensuring a dense molecular structure that resists deformation under extreme pocket-load stress. This specific alloy offers a <strong>35% Elongation Index</strong>, allowing for a perfect mushroomed seal without micro-fracturing. Each burr is high-vacuum PVD coated or chemically passivated to achieve <strong>ISO 9227 Accelerated Salt spray benchmarks</strong> (96+ hours), ensuring heritage-grade patina without structural decay.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Rivet Specifications" data-reveal="scanner">
+                        <li>Core Material <span>Pure H65 Brass / T1 Red Copper</span></li>
+                        <li>Ductility Index <span>35% Elongation (ASTM E8)</span></li>
+                        <li>Manufacture <span>Hardened Stamping & Cold Forging</span></li>
+                        <li>Monogramming <span>5-Axis CNC Micro-Milling (&plusmn;0.005mm)</span></li>
+                        <li>Anti-Oxidation <span>ISO 9227 Salt Spray (96h Pass)</span></li>
+                        <li>Load Rating <span>&gt;850&nbsp;N (Reinforced Pocket-Stay)</span></li>
+                        <li>Size Range <span>8&nbsp;mm / 9.5&nbsp;mm / 10&nbsp;mm</span></li>
+                    </ul>
+
+                    <!-- Material Telemetry Configurator -->
+                    <SpecificationEngine type="rivet" />
+
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>Zero-Water Discharge</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Unsealed Living Patinas</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What is the current trend in denim rivets?</strong>
+                            <p>A: Premium denim purists are demanding "Living Patinas"â€”completely unsealed raw copper that drastically oxidizes and ages alongside the fading indigo of the jeans.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Do you offer distinct burr profiles for extreme heavyweights?</strong>
+                            <p>A: Yes. We engineer extended post lengths specifically structured to pierce and lock 21oz to 25oz super-heavyweight Japanese selvedge denim reliably.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

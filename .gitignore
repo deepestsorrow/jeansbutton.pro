@@ -1,72 +1,29 @@
-# SDAP Website - Git Ignore
-# ========================
+# build output
+dist/
+# generated types
+.astro/
 
-# Local configuration (contains sensitive data)
-config/config.local.js
-config/.env
-.env
-.env.local
-.env.production
+# dependencies
+node_modules/
 
-# Logs
-logs
-*.log
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
 
-# Coverage directory used by tools like istanbul
-coverage/
+# environment variables
+.env
+.env.production
 
-# Dependency directories
-node_modules/
-jspm_packages/
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# macOS-specific files
 .DS_Store
 
-# OS files
-Thumbs.db
+# jetbrains setting folder
+.idea/
 
-# Build outputs
-dist/
-build/
-*.map
+# local backups & environment artifacts
+old-static/
+.netlify/
 
-# Temporary files
-tmp/
-temp/
-*.tmp
-
-# Backup files
-*.bak
-*.backup
-
-# Local development files
-dev/
-local/
-
-# Private keys and certificates
-*.pem
-*.key
-*.crt
-
-# Local Netlify folder
-.netlify

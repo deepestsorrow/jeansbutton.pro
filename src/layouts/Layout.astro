@@ -1,0 +1,215 @@
+---
+import '../styles/sdap-new.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CustomCursor from '../components/CustomCursor.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+
+interface Props {
+    title?: string;
+    description?: string;
+    ogImage?: string;
+    canonical?: string;
+    isHome?: boolean;
+}
+
+const {
+    title = "SDAP | Bespoke Luxury Metalworks",
+    description = "SDAP — Precision-engineered bespoke metalworks for denim, luxury bag fittings, and fine jewelry.",
+    ogImage = "https://jeansbutton.pro/imgs/dark_button_opt.jpg",
+    canonical,
+    isHome = false,
+} = Astro.props;
+
+const resolvedCanonical = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+---
+
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr" translate="no">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" href="/imgs/favicon.webp" />
+    <link rel="apple-touch-icon" href="/imgs/favicon.webp" />
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+
+    <link rel="canonical" href={resolvedCanonical} />
+
+    <!-- JSON-LD Structured Data for Industrial Luxury Branding -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "ManufacturingBusiness",
+      "name": "SDAP | Bespoke Luxury Metalworks",
+      "foundingDate": "2007",
+      "url": "https://jeansbutton.pro/",
+      "logo": "https://jeansbutton.pro/imgs/favicon.webp",
+      "description": "SDAP — Precision-engineered bespoke metalworks for denim, luxury bag fittings, and fine jewelry.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jiaxing",
+        "addressCountry": "CN"
+      },
+      "knowsAbout": ["Denim Hardware", "Precision Engineering", "Bespoke Metalworks", "PVD Coating"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="loader">
+        <div id="loader-logo">S.D.A.P.</div>
+    </div>
+
+    <!-- Custom Cursor (Desktop only) -->
+    <CustomCursor />
+
+    <!-- Navigation Header -->
+    <Navbar />
+
+    <!-- Page Content -->
+    <slot />
+
+    <!-- Site Footer -->
+    <Footer isHome={isHome} />
+
+    <!-- Scroll helpers -->
+    {isHome ? (
+        <a id="global-scroll-btn" class="global-scroll-hint magnetic">Scroll to Explore <span class="arrow-down">&darr;</span></a>
+        <a id="back-to-top-btn" href="#hero" aria-label="Back to top" style="position: fixed; bottom: var(--space-lg); right: var(--space-lg); z-index: 150; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.6); backdrop-filter: blur(12px); color: rgba(255,255,255,0.7); font-size: 1.1rem; text-decoration: none; opacity: 0; pointer-events: none; transition: opacity 0.4s ease, border-color 0.3s ease, color 0.3s ease;" onmouseenter="this.style.borderColor='rgba(255,255,255,0.7)';this.style.color='#fff';" onmouseleave="this.style.borderColor='rgba(255,255,255,0.2)';this.style.color='rgba(255,255,255,0.7)';">&#8593;</a>
+    ) : (
+        <a id="back-to-top-btn" href="/" aria-label="Back to showroom" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 150; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.6); backdrop-filter: blur(12px); color: rgba(255,255,255,0.7); font-size: 1.1rem; text-decoration: none; opacity: 0; pointer-events: none; transition: opacity 0.4s ease;" onmouseenter="this.style.borderColor='rgba(255,255,255,0.7)';this.style.color='#fff';" onmouseleave="this.style.borderColor='rgba(255,255,255,0.2)';this.style.color='rgba(255,255,255,0.7)';">&#8593;</a>
+    )}
+
+    <!-- Watermark -->
+    <div class="global-watermark">Bespoke Metalworks</div>
+
+    <!-- Cookie Consent Banner -->
+    <CookieBanner />
+
+    <!-- Core Layout Orchestration (Preloader, Scroll & Reveal) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Preloader
+            const preloader = document.getElementById('loader');
+            const preloaderLogo = document.getElementById('loader-logo');
+
+            if (preloader && preloaderLogo) {
+                const clearLoader = () => {
+                    if (preloader.classList.contains('faded')) return;
+                    preloader.classList.add('faded');
+                    preloaderLogo.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.transform = 'translateY(-100%)';
+                        setTimeout(() => {
+                            preloader.style.display = 'none';
+                            preloader.style.pointerEvents = 'none';
+                        }, 600);
+                    }, 300);
+                };
+
+                requestAnimationFrame(() => { preloaderLogo.style.opacity = '1'; });
+                // Fallback in case window load doesn't fire or is too slow
+                const fallbackTimeout = setTimeout(clearLoader, 2000);
+
+                window.addEventListener('load', () => {
+                    clearTimeout(fallbackTimeout);
+                    setTimeout(clearLoader, 400);
+                });
+            }
+
+            // Scroll button logic
+            const scrollBtn = document.getElementById('global-scroll-btn');
+            if (scrollBtn) {
+                window.addEventListener('scroll', () => {
+                    const scrollPos = Math.ceil(window.scrollY + window.innerHeight);
+                    const bottomPos = document.documentElement.scrollHeight;
+                    
+                    if (scrollPos >= bottomPos - 120) {
+                        scrollBtn.style.opacity = '0';
+                        scrollBtn.style.pointerEvents = 'none';
+                    } else {
+                        scrollBtn.style.opacity = '1';
+                        scrollBtn.style.pointerEvents = 'auto';
+                    }
+                }, { passive: true });
+
+                scrollBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollBy({ top: window.innerHeight * 0.8, behavior: 'smooth' });
+                });
+            }
+
+            // Back to top button logic
+            const backTopBtn = document.getElementById('back-to-top-btn') as HTMLElement;
+            if (backTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > window.innerHeight * 0.5) {
+                        backTopBtn.style.opacity = '1';
+                        backTopBtn.style.pointerEvents = 'auto';
+                    } else {
+                        backTopBtn.style.opacity = '0';
+                        backTopBtn.style.pointerEvents = 'none';
+                    }
+                }, { passive: true });
+            }
+
+            // Reveal animations using IntersectionObserver
+            const revealEls = document.querySelectorAll(
+                '.category-hero-caption, .tech-content-block, .tech-tabular-list, .tech-insight-grid, .tech-qa-section'
+            );
+            revealEls.forEach(el => el.classList.add('reveal-hidden'));
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+            revealEls.forEach(el => observer.observe(el));
+
+            // Native scanner list reveals
+            const scanLists = document.querySelectorAll('[data-reveal="scanner"]');
+            const scanObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    const items = entry.target.querySelectorAll('li');
+                    items.forEach((li, i) => {
+                        (li as HTMLElement).style.opacity = '0';
+                        (li as HTMLElement).style.transform = 'translateX(-20px)';
+                        (li as HTMLElement).style.transition = `opacity 0.5s ease ${0.08 * i}s, transform 0.5s ease ${0.08 * i}s`;
+                        requestAnimationFrame(() => {
+                            requestAnimationFrame(() => {
+                                (li as HTMLElement).style.opacity = '1';
+                                (li as HTMLElement).style.transform = 'translateX(0)';
+                            });
+                        });
+                    });
+                    entry.target.classList.add('scanner-active');
+                    scanObserver.unobserve(entry.target);
+                });
+            }, { threshold: 0.1 });
+            scanLists.forEach(el => scanObserver.observe(el));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SpecificationEngine from '../components/SpecificationEngine.astro';
+
+const title = "Structural Identifiers & Patches | SDAP Bespoke Metalworks";
+const description = "SDAP bespoke leather patches — Jacron cellulose, mycelium mushroom leather & vulcanized cork. 100-ton hydraulic embossing, PETA-approved vegan, ISO 3377-2 certified.";
+---
+
+<Layout title={title} description={description} isHome={false}>
+    <main class="editorial-flow">
+        <section class="category-section" id="patches">
+            <div class="category-hero">
+                <img src="/imgs/macro_patch_opt.jpg" alt="Jacron Denim Patch" class="category-hero-img" loading="lazy" width="1920" height="1080">
+                <div class="hero-scan-line" aria-hidden="true"></div>
+                <div class="hero-hud-coordinates" aria-label="System Status">
+                    <span>RESOLUTION &gt;600DPI</span>
+                    <span>LASER SCAN: ACTIVE</span>
+                    <span>PETA APPROVED</span>
+                </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">03</span>
+                    <h2>Structural Identifiers</h2>
+                    <p>Laser Etched Jacron &amp; Vulcanized Leather</p>
+                </div>
+            </div>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Sustainable Jacron & Vegan Bio-Polymers</h3>
+                        <p>Our structural identifiers utilize high-density <strong>Cellulose Jacron</strong> and <strong>Mycelium (Mushroom) Leathers</strong>, offering a high-performance vegan alternative with zero visual compromise. The fibers are vulcanized at high pressure to ensure permanent tear resistance, even after repetitive industrial enzyme baths. We utilize non-toxic, bio-based adhesives for seamless garment integration.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Identifier Specifications">
+                        <li>Substrates <span>Jacron Cellulose / Vulcanized Cork / Mycelium</span></li>
+                        <li>Thermal Stability <span>Resistant up to 210&deg;C (Steam/Iron Safe)</span></li>
+                        <li>Embossing Logic <span>100-Ton Hydraulic Cold-Press</span></li>
+                        <li>Tear Resistance <span>ISO 3377-2 High-Tensile Rating</span></li>
+                        <li>Print Precision <span>Micro-Fiber Laser Etching (Resolution &gt;600 DPI)</span></li>
+                        <li>Thickness Delta <span>0.8&nbsp;mm &ndash; 3.0&nbsp;mm Custom Skiving</span></li>
+                        <li>Wash Integrity <span>Zero Color Migration / Dimensionally Stable</span></li>
+                    </ul>
+
+                    <!-- Material Telemetry Configurator -->
+                    <SpecificationEngine type="patch" />
+
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>100% PETA-Approved Vegan</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Mycelium (Mushroom) Leathers</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What is the latest material trend in denim patches?</strong>
+                            <p>A: High-end streetwear and luxury labels are moving fully away from animal hides towards Mycelium (mushroom leather) and post-consumer recycled cellulose blends with zero sacrifice to visual fidelity.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Can you laser-etch variable data (like serial numbers)?</strong>
+                            <p>A: Yes. Because our etching is guided by 5-axis robotics, we can increment serial numbers or alter data on every single individual patch during a production batch.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

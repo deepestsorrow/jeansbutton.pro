@@ -1,0 +1,29 @@
+---
+---
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-text">
+        We use cookies to elevate your browsing experience and analyze site traffic. By continuing, you agree to our <a href="/cookie-policy">Cookie Policy</a>.
+    </div>
+    <button id="accept-cookies" class="cookie-btn">Accept</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptCookies = document.getElementById('accept-cookies');
+
+        if (cookieBanner && acceptCookies) {
+            if (!localStorage.getItem('sdap_cookies_accepted')) {
+                setTimeout(() => {
+                    cookieBanner.classList.add('show');
+                }, 2500); // Elevates gracefully after 2.5s
+            }
+
+            acceptCookies.addEventListener('click', () => {
+                localStorage.setItem('sdap_cookies_accepted', 'true');
+                cookieBanner.classList.remove('show');
+                document.body.focus();
+            });
+        }
+    });
+</script>

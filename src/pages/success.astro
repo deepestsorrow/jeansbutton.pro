@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Inquiry Received | SDAP Bespoke";
+const description = "";
+---
+
+<Layout title={title} description={description} isHome={false}>
+    <main class="legal-container">
+        <div class="success-content">
+            <h1>Transmission Received.</h1>
+            <p>Your technical inquiry has been securely routed to our engineering board.</p>
+            <a href="/" class="artistic-link magnetic" style="display: inline-flex;">
+                Return to Showroom 
+                <span class="arrow-circle">←</span>
+            </a>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .legal-container {
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 15vh;
+        padding-bottom: 10vh;
+    }
+    .success-content {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    @keyframes fadeInUp {
+        to { opacity: 1; transform: translateY(0); }
+    }
+    h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3.5rem); font-style: italic; margin-bottom: 1.5rem; color: #fff; font-weight: 400; }
+    p { font-family: var(--font-sans); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.6); margin-bottom: 3rem; }
+</style>
+

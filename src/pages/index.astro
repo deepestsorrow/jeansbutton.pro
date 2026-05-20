@@ -1,0 +1,492 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "S.D.A.P. | Bespoke Luxury Metalworks — Est. 2007";
+const description = "SDAP (S&D Asia Pacific) — Precision-engineered bespoke metalworks for denim hardware, luxury bag fittings, cigar humidor accessories, and fine jewelry components.";
+---
+
+<Layout title={title} description={description} isHome=true>
+    <main class="editorial-flow">
+        <!-- &rdquo;&rdquo;&rdquo; HERO SECTION &rdquo;&rdquo;&rdquo; -->
+        <section class="editorial-hero" id="hero" aria-labelledby="hero-title">
+            <picture style="display: block; position: absolute; inset: 0; z-index: 1;">
+                <img src="/imgs/jewelry_pendant_hero.webp" alt="Bespoke Metalworks Macro" class="editorial-hero-img" width="1920" height="1080" fetchpriority="high">
+            </picture>
+            <div class="hero-scan-line" aria-hidden="true"></div>
+            <div class="hero-hud-coordinates" aria-label="Geographic Coordinates and System Status">
+                <span>30.7459&deg; N, 120.7555&deg; E</span>
+                <span>TOLERANCE &plusmn;0.01MM</span>
+                <span>CALIBRATION: ACTIVE</span>
+            </div>
+            <div class="editorial-hero-overlay"></div>
+            <div class="editorial-hero-content">
+                <h1 id="hero-title" class="editorial-hero-title">S.D.A.P.</h1>
+                <p class="editorial-hero-sub">
+                    <span class="sub-line-1">Bespoke Metalworks &mdash; Est. 2007</span>
+                    <span class="sub-line-2">Denim · Bags · Cigars · Fine Jewelry</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- ── TRUST STRIP ── -->
+        <section style="padding: 4rem var(--space-lg); border-bottom: 1px solid rgba(255,255,255,0.06); background: #050505;">
+            <p style="text-align:center; font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:3rem; font-weight: 300;">Supplying the world&rsquo;s most demanding labels since 2007</p>
+            <div class="trust-strip-logos" style="display:flex; justify-content:center; align-items:center; gap:clamp(2rem, 6vw, 6rem); flex-wrap:wrap; opacity: 0.65; filter: grayscale(0.7); transition: opacity 0.5s ease, filter 0.5s ease;" onmouseenter="this.style.opacity='0.9';this.style.filter='grayscale(0)';" onmouseleave="this.style.opacity='0.65';this.style.filter='grayscale(0.7)';">
+                <span class="magnetic" style="font-family:var(--font-serif); font-size:clamp(1rem,2.2vw,1.4rem); letter-spacing:0.18em; font-weight:400; font-style: italic;">Oeko-Tex&reg;</span>
+                <span class="magnetic" style="font-family:var(--font-serif); font-size:clamp(1rem,2.2vw,1.4rem); letter-spacing:0.18em; font-weight:400; font-style: italic;">ASTM International</span>
+                <span class="magnetic" style="font-family:var(--font-serif); font-size:clamp(1rem,2.2vw,1.4rem); letter-spacing:0.18em; font-weight:400; font-style: italic;">ISO 9227</span>
+                <span class="magnetic" style="font-family:var(--font-serif); font-size:clamp(1rem,2.2vw,1.4rem); letter-spacing:0.18em; font-weight:400; font-style: italic;">Ellen MacArthur Foundation</span>
+                <span class="magnetic" style="font-family:var(--font-serif); font-size:clamp(1rem,2.2vw,1.4rem); letter-spacing:0.18em; font-weight:400; font-style: italic;">PETA Approved</span>
+            </div>
+        </section>
+
+        <!-- &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+             01 &mdash; TACK BUTTONS
+             &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; -->
+        <section class="category-section" id="tack-buttons">
+            <a href="/tack-buttons" class="category-hero">
+                <div class="lqip-container">
+                <img src="/imgs/dark_button_opt.jpg" alt="Matte Black Tack Button" class="category-hero-img" loading="lazy" width="1920" height="1080" onload="this.setAttribute('data-loaded', 'true')">
+            </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">01</span>
+                    <h2>Tack Buttons &amp; Shanks</h2>
+                    <p>Aerospace-grade zinc alloys &amp; PVD Anti-oxidation</p>
+                </div>
+            </a>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Detachable Monomaterial Framework</h3>
+                        <p>Unlike traditional electroplated rivets, our new line of Tack Buttons feature a detachable mono-material framework designed explicitly for the circular economy. The button can be unscrewed via a proprietary micro-thread, allowing the denim to be fully recycled without the need to cut out the hardware.</p>
+                    </div>
+                    <div class="tech-content-block">
+                        <h3>Molecular PVD Bonding & Hybrid Alloys</h3>
+                        <p>Our buttons are engineered for heavy-duty denim weights exceeding 16oz. We utilize <strong>High-Vacuum PVD (Physical Vapor Deposition)</strong>, establishing a near-indestructible anti-oxidation barrier. This process bonds the finish at a molecular level, providing a Vickers Hardness (HV) rating 10x superior to standard electroplating. The base substrates consist of <strong>Zamak 5 die-castings</strong> for complex branding and <strong>H65 Brass</strong> for heritage-grade structural integrity.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Tack Button Specifications" data-reveal="scanner">
+                        <li>Substrate <span>Zamak 5 (Die-Cast) / H65 Brass (Forged)</span></li>
+                        <li>Hardness Profile <span>2500&ndash;3000 HV (PVD Molecular Coating)</span></li>
+                        <li>Surface Durability <span>ASTM B117 - 120h High-Vaccum Pass</span></li>
+                        <li>Wash Resistance <span>Industrial Stone-Wash & Enzyme (50+ Cycles)</span></li>
+                        <li>Tensile Strength <span>&gt;850&nbsp;N (Reinforced Shank Core)</span></li>
+                        <li>Certification <span>Oeko-Tex Standard 100 Class I</span></li>
+                        <li>Precision <span>&plusmn;0.01&nbsp;mm High-Tolerance Tooling</span></li>
+                        <li>Surface Option <span>Soft-Touch TPU/TPE Overmould (Skin-Safe)</span></li>
+                        <li>Overmould Thickness <span>&plusmn;0.02&nbsp;mm Precision Bond Tolerance</span></li>
+                    </ul>
+
+                    <div class="tech-content-block">
+                        <h3>Soft-Touch Rubber Overmoulding &mdash; Skin-Grade Haptics</h3>
+                        <p>For labels demanding a premium <strong>tactile identity</strong>, we offer a full <strong>TPU / TPE Rubber Overmoulding</strong> process applied directly to the exposed button face. The result is a velvety, skin-feeling surface indistinguishable from the premium soft-touch found in luxury consumer electronics &mdash; zero cold metallic contact, pure warmth on touch. The rubber layer is precision-moulded at <strong>&plusmn;0.02&nbsp;mm thickness tolerance</strong>, ensuring a flush, bubble-free bond to the metal substrate beneath. Available in matte black, stone grey, bone white, and fully custom bespoke RAL colorways. Certified skin-safe to <strong>GB/T 17592 and OEKO-TEX&reg; Standard 100</strong>.</p>
+                    </div>
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>Ellen MacArthur Foundation Circular</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Detachable &amp; Screw-Off Hardware</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>2026 Trend</span>
+                            <strong>QR-Encoded Traceability Buttons</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Finish Frontier</span>
+                            <strong>Soft-Touch TPU Overmould</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What is the defining trend for denim hardware at the luxury level?</strong>
+                            <p>A: High-end labels are redesigning garments for "End-of-Life" (EOL) circularity. Screw-on/screw-off hardware is becoming mandatory so denim can be shredded and recycled instantly.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Are the PVD coatings susceptible to chipping?</strong>
+                            <p>A: No. Unlike paint or standard electroplating, PVD is molecularly bonded to the alloy lattice, making it impervious to industrial stone-washing and standard chipping.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Do you offer a rubber or soft-touch coating on the button face?</strong>
+                            <p>A: Yes. Our TPU/TPE Rubber Overmoulding wraps the exposed face in a skin-grade, velvety rubber finish &mdash; the same tactile technology used in luxury consumer electronics. It is warm to touch, completely matte, wash-stable across 50+ industrial cycles, and available in any bespoke RAL colorway.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Can you embed digital traceability into a button?</strong>
+                            <p>A: Yes. We offer a micro-engraved QR code on the underside shank that links to a digital product passport &mdash; providing end consumers and recyclers with full material composition, origin, and end-of-life instructions. This is rapidly becoming a compliance requirement for EU textile regulations post-2026.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+             02 &mdash; COPPER RIVETS
+             &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; -->
+        <section class="category-section" id="rivets">
+            <a href="/rivets" class="category-hero">
+                <div class="lqip-container">
+                <img src="/imgs/copper_rivet_opt.jpg" alt="Copper Denim Rivet" class="category-hero-img" loading="lazy" width="1920" height="1080" onload="this.setAttribute('data-loaded', 'true')">
+            </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">02</span>
+                    <h2>CNC-Milled Burrs &amp; Rivets</h2>
+                    <p>5-Axis CNC Milling &amp; Structural Enforcement</p>
+                </div>
+            </a>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Cold-Forged H65 Brass Integrity & Ductility</h3>
+                        <p>Our rivets are cold-forged from premium <strong>H65 Structural Brass</strong>, ensuring a dense molecular structure that resists deformation under extreme pocket-load stress. This specific alloy offers a <strong>35% Elongation Index</strong>, allowing for a perfect mushroomed seal without micro-fracturing. Each burr is high-vacuum PVD coated or chemically passivated to achieve <strong>ISO 9227 Accelerated Salt Spray benchmarks</strong> (96+ hours), ensuring heritage-grade patina without structural decay.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Rivet Specifications" data-reveal="scanner">
+                        <li>Core Material <span>Pure H65 Brass / T1 Red Copper</span></li>
+                        <li>Ductility Index <span>35% Elongation (ASTM E8)</span></li>
+                        <li>Manufacture <span>Hardened Stamping & Cold Forging</span></li>
+                        <li>Monogramming <span>5-Axis CNC Micro-Milling (&plusmn;0.005mm)</span></li>
+                        <li>Anti-Oxidation <span>ISO 9227 Salt Spray (96h Pass)</span></li>
+                        <li>Load Rating <span>&gt;850&nbsp;N (Reinforced Pocket-Stay)</span></li>
+                        <li>Size Range <span>8&nbsp;mm / 9.5&nbsp;mm / 10&nbsp;mm</span></li>
+                    </ul>
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>Zero-Water Discharge Plating</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Unsealed Living Patina Copper</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>2026 Trend</span>
+                            <strong>Bar-Tack Replacement (Disassembly)</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Sustainability</span>
+                            <strong>Recycled Alloy Formulations</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What is the current trend in denim rivets?</strong>
+                            <p>A: Premium denim purists are demanding "Living Patinas"&mdash;completely unsealed raw copper that drastically oxidizes and ages alongside the fading indigo of the jeans.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Do you offer distinct burr profiles for extreme heavyweights?</strong>
+                            <p>A: Yes. We engineer extended post lengths specifically structured to pierce and lock 21oz to 25oz super-heavyweight Japanese selvedge denim reliably.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+             03 &mdash; STRUCTURAL IDENTIFIERS (PATCHES)
+             &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; -->
+        <section class="category-section" id="patches">
+            <a href="/patches" class="category-hero">
+                <div class="lqip-container">
+                <img src="/imgs/macro_patch_opt.jpg" alt="Jacron Denim Patch" class="category-hero-img" loading="lazy" width="1920" height="1080" onload="this.setAttribute('data-loaded', 'true')">
+            </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">03</span>
+                    <h2>Structural Identifiers</h2>
+                    <p>Laser Etched Jacron &amp; Vulcanized Leather</p>
+                </div>
+            </a>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Sustainable Jacron & Vegan Bio-Polymers</h3>
+                        <p>Our structural identifiers utilize high-density <strong>Cellulose Jacron</strong> and <strong>Mycelium (Mushroom) Leathers</strong>, offering a high-performance vegan alternative with zero visual compromise. The fibers are vulcanized at high pressure to ensure permanent tear resistance, even after repetitive industrial enzyme baths. We utilize non-toxic, bio-based adhesives for seamless garment integration.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Identifier Specifications">
+                        <li>Substrates <span>Jacron Cellulose / Vulcanized Cork / Mycelium</span></li>
+                        <li>Thermal Stability <span>Resistant up to 210&deg;C (Steam/Iron Safe)</span></li>
+                        <li>Embossing Logic <span>100-Ton Hydraulic Cold-Press</span></li>
+                        <li>Tear Resistance <span>ISO 3377-2 High-Tensile Rating</span></li>
+                        <li>Print Precision <span>Micro-Fiber Laser Etching (Resolution &gt;600 DPI)</span></li>
+                        <li>Thickness Delta <span>0.8&nbsp;mm &ndash; 3.0&nbsp;mm Custom Skiving</span></li>
+                        <li>Wash Integrity <span>Zero Color Migration / Dimensionally Stable</span></li>
+                    </ul>
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>100% PETA-Approved Vegan</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Mycelium (Mushroom) Leathers</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>2026 Trend</span>
+                            <strong>NFC-Embedded Smart Patches</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Process</span>
+                            <strong>Bio-Based Zero-VOC Adhesives</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What is the latest material trend in denim patches?</strong>
+                            <p>A: High-end streetwear and luxury labels are moving fully away from animal hides towards Mycelium (mushroom leather) and post-consumer recycled cellulose blends with zero sacrifice to visual fidelity.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Can you laser-etch variable data (like serial numbers)?</strong>
+                            <p>A: Yes. Because our etching is guided by 5-axis robotics, we can increment serial numbers or alter data on every single individual patch during a production batch.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+             04 &mdash; BAG HARDWARE
+             &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; -->
+        <section class="category-section" id="bags">
+            <a href="/bags" class="category-hero">
+                <div class="lqip-container">
+                <img src="/imgs/bag_clasp_opt.jpg" alt="Luxury Bag Hardware Clasp" class="category-hero-img" loading="lazy" width="1920" height="1080" onload="this.setAttribute('data-loaded', 'true')">
+            </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">04</span>
+                    <h2>High-End Bag Hardware</h2>
+                    <p>Precision Milled Clasps &amp; Heavy-Duty Zippers</p>
+                </div>
+            </a>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Ergonomic Kinematics & Surface Hardness</h3>
+                        <p>Standardized on <strong>AISI 316L Stainless Steel</strong> and <strong>HP Solid Brass</strong>, our bag hardware is designed for the high-end mobility of modern luxury. We utilize <strong>High-Vacuum Sputtering (PVD)</strong> to achieve a <strong>Vickers Hardness (HV) of 450+</strong>, establishing a near-indestructible ceramic barrier. Our finishes are benchmarked against **ASTM B117 Neutral Salt Spray** (120 Hours) and **ISO 4524 Adhesion standards** to prevent environmental pitting and micro-striation.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Bag Hardware Specifications" data-reveal="scanner">
+                        <li>Base Alloys <span>AISI 316L Stainless / HP Brass / Grade 5 Titanium</span></li>
+                        <li>Surface Hardness <span>450-600 HV (PVD Molecular Bond)</span></li>
+                        <li>Salt Spray Rating <span>ASTM B117 - 120 Hours (Grade 10)</span></li>
+                        <li>Abrasion Resistance <span>15x superior to standard electroplating</span></li>
+                        <li>Load Rating <span>&gt;1500&nbsp;N Tensile Strength per Clasp</span></li>
+                        <li>Acoustic Logic <span>Tuned Internal Damping (Silent Operation)</span></li>
+                        <li>Size Precision <span>Micron-calibrated friction fits (&plusmn;0.005mm)</span></li>
+                    </ul>
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>Oeko-Tex 100 &amp; REACH</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Eco-Titanium Structures</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What are the current trends in bag hardware?</strong>
+                            <p>A: We are seeing a massive shift towards architecturally complex geometric closures using lightweight, eco-friendly Titanium alloys rather than dense steel.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Are the finishes resistant to saltwater?</strong>
+                            <p>A: Yes. The PVD lattice passes 48-hour continuous salt-spray tests, maintaining physical integrity in marine-environment luxury applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+             05 &mdash; CIGAR & HUMIDOR ACCESSORIES
+             &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; -->
+        <section class="category-section" id="cigars">
+            <a href="/cigars" class="category-hero">
+                <div class="lqip-container">
+                <img src="/imgs/humidor_hinge_opt.jpg" alt="Precision Milled Circular Humidor Hinge" class="category-hero-img" loading="lazy" width="1920" height="1080" onload="this.setAttribute('data-loaded', 'true')">
+            </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">05</span>
+                    <h2>Cigar &amp; Humidor Precision</h2>
+                    <p>Precise Hermetic Hinges &amp; Custom Lock Escutcheons</p>
+                </div>
+            </a>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Precision 6061 Forged Milling</h3>
+                        <p>Our bespoke humidor hinges and locks are CNC-milled from solid blocks of <strong>6061-T6 Aerospace Aluminum</strong> or <strong>H65 HP Brass</strong>. Machined to absolute tolerances of &plusmn;0.005", these components provide the structural rigidity required for permanent seal integrity. We utilize <strong>Fluorocarbon (Viton) gaskets</strong> to ensure a controlled air-exchange rate without VOC off-gassing, protecting the organic profile of the tobacco.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Humidor Specifications" data-reveal="scanner">
+                        <li>Substrate <span>Aerospace 6061-T6 Aluminum / H65 HP Brass</span></li>
+                        <li>Machining <span>High-Precision CNC (&plusmn;0.005mm Tolerance)</span></li>
+                        <li>Friction Index <span>0.04μ (Teflon-Infused Pivot)</span></li>
+                        <li>Gasket Material <span>Medical-Grade Silicone / Viton Gaskets</span></li>
+                        <li>Seal Tension <span>Calibrated Hermetic Micro-Climate Compression</span></li>
+                        <li>Surface Integrity <span>Passivated Type II Anodization / PVD Gold</span></li>
+                        <li>Acoustic Metric <span>Damped "Luxury-Thud" Closing Logic</span></li>
+                    </ul>
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>Oeko-Tex Standard 100</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Carbon-inlay Escutcheons</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What trends are dominating humidor hardware?</strong>
+                            <p>A: High-net-worth clients prefer stealth-wealth aesthetics. Brushed rhodium and matte gold with subtle carbon-fiber inlays have overtaken high-gloss finishes entirely.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Does the metal interfere with Spanish Cedar aroma?</strong>
+                            <p>A: Not at all. We utilize pure brass free of VOC-off-gassing coatings, preventing any disruption to the organic aroma of the cedar wood.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- &rdquo;&rdquo;&rdquo; 06 &mdash; FINE JEWELRY &rdquo;&rdquo;&rdquo; -->
+        <section class="category-section" id="jewelry">
+            <a href="/jewelry" class="category-hero">
+                <div class="lqip-container">
+                <img src="/imgs/hero_macro_fixed.webp" alt="Perfectly Symmetrical Solitaire Diamond Ring Macro" class="category-hero-img" loading="lazy" width="1920" height="1080" onload="this.setAttribute('data-loaded', 'true')">
+            </div>
+                <div class="category-hero-overlay"></div>
+                <div class="category-hero-caption">
+                    <span class="category-index">06</span>
+                    <h2>Fine Jewelry Metalworks</h2>
+                    <p>Abstract Geometry &amp; Micro-Faceting Technology</p>
+                </div>
+            </a>
+
+            <div class="spec-panel">
+                <div class="spec-content">
+                    <div class="tech-content-block">
+                        <h3>Platinum 950 Ductility & Vickers Calibrations</h3>
+                        <p>Our fine jewelry metalworks utilize <strong>Platinum 950</strong> for structural prongs, choosing its superior ductility (Vickers ~125 HV) to securely cradle high-value stones against impact without snapping. For high-rigidity pavé bands, we utilize <strong>HP-Finished 18k Gold</strong> (HV ~220) to prevent band ovaling. Every surface is finished using <strong>Zaratsu blade-polishing</strong> for distortion-free reflection indices.</p>
+                    </div>
+
+                    <ul class="tech-tabular-list" aria-label="Jewelry Specifications">
+                        <li>Metals <span>Platinum 950 / 18k Palladium-White / 18k Yellow Gold</span></li>
+                        <li>Prong Engineering <span>Dual-Axis Claws / Soft-Paws Seating</span></li>
+                        <li>Setting Logic <span>Microscope-Guided Pavé (Sub-Micron Precision)</span></li>
+                        <li>Hardness Index <span>Calibrated 125&ndash;230 HV (Substrate Specific)</span></li>
+                        <li>Finish Tech <span>Hand-Laid 0.5-Micron PVD / Zaratsu Mirror Polish</span></li>
+                        <li>Stone Security <span>4-Point Prongs with Reinforced Galleries</span></li>
+                        <li>Precision Gap <span>&plusmn;0.005mm Algorithmic Faceting</span></li>
+                    </ul>
+
+                    <div class="tech-insight-grid">
+                        <div class="tech-insight-card">
+                            <span>Compliance</span>
+                            <strong>Oeko-Tex Standard 100</strong>
+                        </div>
+                        <div class="tech-insight-card">
+                            <span>Future Trend</span>
+                            <strong>Lab-Grown Gem Integrations</strong>
+                        </div>
+                    </div>
+
+                    <div class="tech-qa-section">
+                        <div class="qa-item">
+                            <strong>Q: What represents the cutting edge in jewelry components today?</strong>
+                            <p>A: Hybrid components. The marriage of ultra-precision CNC milled titanium frameworks paired with ethically sourced, lab-grown secondary stone integrations is highly sought after by progressive couture labels.</p>
+                        </div>
+                        <div class="qa-item">
+                            <strong>Q: Do you offer ethical sourcing certification?</strong>
+                            <p>A: Absolutely. All raw metal materials are conflict-free and adhere strictly to global ethical sourcing guidelines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+             07 &mdash; PARTNERSHIPS & CTA
+             &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; -->
+        <section class="category-section category-section--final" id="partnerships">
+            <div class="category-hero">
+                <div class="lqip-container">
+                <img src="/imgs/denim_opt.jpg" alt="Raw Denim Texture" class="category-hero-img" loading="lazy" width="1920" height="1080" onload="this.setAttribute('data-loaded', 'true')">
+            </div>
+                <div class="category-hero-overlay category-hero-overlay--dark"></div>
+                <div class="category-hero-caption category-hero-caption--center">
+                    <h2>Global Hardware Partnerships</h2>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 2rem; justify-content: center;">
+                        <div style="border: 1px solid rgba(255,255,255,0.2); padding: 0.4rem 0.8rem; font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Oeko-Tex Standard 100</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.2); padding: 0.4rem 0.8rem; font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Industrial Heritage Since 2007</div>
+                    </div>
+                    <p class="partnership-text">Established in 2007, S.D.A.P. has served as the silent engineering backbone for over 15 years &mdash; collaborating with <strong>leading European high-street fashion giants</strong> and <strong>premier Swiss-engineered motorracing leaders</strong> at global industrial scale.</p>
+                    
+                    <!-- Partnership Credentials — Typeset Authority -->
+                    <div style="display:flex; justify-content:center; gap:1px; margin-top:3rem; flex-wrap:wrap;">
+                        <div class="magnetic" style="display:flex; flex-direction:column; align-items:center; gap:8px; padding: 1.5rem 2rem; border:1px solid rgba(255,255,255,0.1); border-right: none;">
+                            <span style="font-family:var(--font-mono); font-size:0.5rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--accent-brass); display:block;">Heritage</span>
+                            <span style="font-family:var(--font-serif); font-size:0.95rem; font-style:italic; color:rgba(255,255,255,0.75); white-space:nowrap;">EU High-Street Fashion</span>
+                            <span style="font-family:var(--font-mono); font-size:0.45rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.3);">10+ Years · Scale Volumes</span>
+                        </div>
+                        <div class="magnetic" style="display:flex; flex-direction:column; align-items:center; gap:8px; padding: 1.5rem 2rem; border:1px solid rgba(255,255,255,0.1); border-right: none;">
+                            <span style="font-family:var(--font-mono); font-size:0.5rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--accent-brass); display:block;">Precision</span>
+                            <span style="font-family:var(--font-serif); font-size:0.95rem; font-style:italic; color:rgba(255,255,255,0.75); white-space:nowrap;">Swiss Motorsport Leader</span>
+                            <span style="font-family:var(--font-mono); font-size:0.45rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.3);">High-Tensile · Race-Grade</span>
+                        </div>
+                        <div class="magnetic" style="display:flex; flex-direction:column; align-items:center; gap:8px; padding: 1.5rem 2rem; border:1px solid rgba(255,255,255,0.1);">
+                            <span style="font-family:var(--font-mono); font-size:0.5rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--accent-brass); display:block;">Luxury</span>
+                            <span style="font-family:var(--font-serif); font-size:0.95rem; font-style:italic; color:rgba(255,255,255,0.75); white-space:nowrap;">Global Denim Houses</span>
+                            <span style="font-family:var(--font-mono); font-size:0.45rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.3);">Bespoke · NDA Protected</span>
+                        </div>
+                    </div>
+
+                    <a href="/contact" class="artistic-link magnetic" style="margin-top: 2rem; align-self: center;">
+                        Request a Custom Quote
+                        <span class="arrow-circle">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="spec-panel" style="padding-top: 5rem; padding-bottom: 2rem;">
+                <h3 style="text-align: center; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 2rem;">Macro Artifact Explorer</h3>
+                <div class="horizontal-scroller">
+                    <div class="snap-card"><img src="/imgs/dark_button_opt.jpg" style="width: 100%; height: 300px; object-fit: cover;" loading="lazy" onload="this.setAttribute('data-loaded', 'true')"></div>
+                    <div class="snap-card"><img src="/imgs/copper_rivet_opt.jpg" style="width: 100%; height: 300px; object-fit: cover;" loading="lazy" onload="this.setAttribute('data-loaded', 'true')"></div>
+                    <div class="snap-card"><img src="/imgs/macro_patch_opt.jpg" style="width: 100%; height: 300px; object-fit: cover;" loading="lazy" onload="this.setAttribute('data-loaded', 'true')"></div>
+                    <div class="snap-card"><img src="/imgs/bag_clasp_opt.jpg" style="width: 100%; height: 300px; object-fit: cover;" loading="lazy" onload="this.setAttribute('data-loaded', 'true')"></div>
+                    <div class="snap-card"><img src="/imgs/humidor_hinge_opt.jpg" style="width: 100%; height: 300px; object-fit: cover;" loading="lazy" onload="this.setAttribute('data-loaded', 'true')"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
