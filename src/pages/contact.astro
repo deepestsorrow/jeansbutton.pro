@@ -5,145 +5,976 @@ const title = "Contact & Policies | SDAP Precision Hardware";
 const description = "SDAP Global Headquarters — B2B inquiry forms, manufacturing policies, and wholesale partnerships for denim hardware, bag fittings, cigar accessories, and fine jewelry metalworks.";
 ---
 
-<Layout title={title} description={description} isHome=false>
-    <main class="page-container">
-        <header class="contact-hero">
-            <h1>Global Connectivity.</h1>
-            <p>Headquarters & B2B Inquiries</p>
-        </header>
+<Layout title={title} description={description} isHome={false}>
+    <main class="contact-page-wrapper">
+        <!-- Ambient Radial Background Glows -->
+        <div class="ambient-glow glow-1" aria-hidden="true"></div>
+        <div class="ambient-glow glow-2" aria-hidden="true"></div>
 
-        <div class="contact-grid">
-            
-            <!-- Left: HQ Details -->
-            <section class="info-panel">
-                <h2>Direct Channels</h2>
+        <div class="page-container">
+            <!-- Header Section -->
+            <header class="contact-hero">
+                <div class="hero-tag">COMMUNICATION PROTOCOL</div>
+                <h1>Global Connectivity.</h1>
+                <p class="hero-subtitle">Headquarters & B2B Inquiry Terminal</p>
+            </header>
+
+            <div class="contact-grid">
                 
-                <div class="info-block">
-                    <strong>Global Headquarters</strong>
-                    <p>Jiaxing, China <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-brass); opacity: 0.8; margin-left: 10px;">[GMT+8]</span></p>
-                </div>
+                <!-- Left: Headquarters & Direct Channels -->
+                <section class="info-panel">
+                    <div class="panel-section">
+                        <h2 class="panel-section-title">Direct Channels</h2>
+                        
+                        <div class="info-cards-stack">
+                            <!-- Card 1: Jiaxing -->
+                            <div class="info-card magnetic">
+                                <div class="card-inner">
+                                    <span class="card-label">Global Headquarters</span>
+                                    <div class="card-main">
+                                        <p class="card-value">Jiaxing, China</p>
+                                        <span class="timezone-tag">GMT+8</span>
+                                    </div>
+                                    <p class="card-subtext">Precision Engineering & Primary Production Facility</p>
+                                </div>
+                            </div>
 
-                <div class="info-block" style="margin-top: var(--space-md);">
-                    <strong>Registered Legal Entity</strong>
-                    <div style="margin-top: 0.5rem; display: block;">
-                        <img src="/imgs/company_name.png" alt="" style="height: 16px; width: auto; display: block; opacity: 0.95; pointer-events: none; -webkit-user-drag: none; user-select: none;" />
+                            <!-- Card 2: Legal Entity (Image) -->
+                            <div class="info-card entity-card magnetic">
+                                <div class="card-inner">
+                                    <span class="card-label">Registered Legal Entity</span>
+                                    <div class="company-image-container">
+                                        <img src="/imgs/company_name.png" alt="S&D ASIA PACIFIC LTD" class="legal-entity-img" />
+                                    </div>
+                                    <p class="card-subtext">Official corporate entity for all commercial invoicing and B2B contracts.</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Faisalabad -->
+                            <div class="info-card magnetic">
+                                <div class="card-inner">
+                                    <span class="card-label">South Asia Regional Hub</span>
+                                    <div class="card-main">
+                                        <p class="card-value">Faisalabad, Pakistan</p>
+                                        <span class="timezone-tag">GMT+5</span>
+                                    </div>
+                                    <p class="card-subtext">Supply Chain Management & Regional Client Relations</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="info-block">
-                    <strong>South Asia Regional Hub</strong>
-                    <p>Faisalabad, Pakistan <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-brass); opacity: 0.8; margin-left: 10px;">[GMT+5]</span></p>
-                </div>
-                
-                <div class="info-block" style="margin-top: var(--space-lg);">
-                    <strong>S.D.A.P.</strong>
-                    <p style="font-style: italic; font-family: var(--font-serif); font-size: 1.1rem; color: #fff;">&ldquo;Structural Denim And Precision&rdquo;</p>
-                </div>
-
-                <div class="info-block" style="margin-top: var(--space-lg);">
-                    <strong>Digital Comms</strong>
-                    <div style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: 1rem;">
-                        <a href="#" class="social-btn whatsapp magnetic" onclick="cw(event)">WhatsApp</a>
-                        <a href="#" class="social-btn wechat magnetic" onclick="cc(event)">WeChat</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Right: Inquiry Form Table -->
-            <section class="inquiry-panel">
-                <form id="b2b-form" name="b2b-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="b2b-inquiry" />
-                    <p class="hidden" style="display:none;"><label>Don&rsquo;t fill this out if you're human: <input name="bot-field" /></label></p>
-                    <div class="hud-watermark">SEQ-ID: ALPHA_B2B_PROTOCOL</div>
                     
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
-                            <label for="name">Representative Name</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="company" name="organization" placeholder=" " required autocomplete="organization">
-                            <label for="company">Brand / Corporation</label>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
-                            <label for="email">Corporate Email</label>
-                        </div>
-                        <div class="form-group">
-                            <select id="interest" name="interest" required>
-                                <option value="" disabled selected>Primary Material Interest</option>
-                                <option value="zamak">Zamak 5 (Die-Cast Logic)</option>
-                                <option value="brass">H65 Structural Brass (Forged)</option>
-                                <option value="steel">316L Stainless Steel (Maritime)</option>
-                                <option value="aluminum">6061 Aerospace Aluminum</option>
-                            </select>
-                            <label for="interest" class="static-label">Technical Focus</label>
+                    <div class="panel-section">
+                        <h2 class="panel-section-title">Corporate Philosophy</h2>
+                        <div class="philosophy-card">
+                            <span class="philosophy-label">S.D.A.P.</span>
+                            <blockquote class="philosophy-quote">
+                                &ldquo;Structural Denim And Precision&rdquo;
+                            </blockquote>
                         </div>
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <select id="moq" name="moq" required>
-                                <option value="" disabled selected>Estimated Monthly Volume</option>
-                                <option value="sample">Proto / Sampling (Under 5,000 units)</option>
-                                <option value="low">Small Batch (5,000 - 25,000 units)</option>
-                                <option value="med">Mid-Scale (25,000 - 100,000 units)</option>
-                                <option value="high">Industrial (100,000+ units)</option>
-                            </select>
-                            <label for="moq" class="static-label">Production Volume</label>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" id="project" placeholder=" ">
-                            <label for="project">Project / Collection Name (Optional)</label>
+                    <div class="panel-section">
+                        <h2 class="panel-section-title">Digital Comms</h2>
+                        <div class="social-links-grid">
+                            <a href="#" class="social-btn whatsapp magnetic">
+                                <span class="btn-indicator"></span>
+                                <span class="btn-text">WhatsApp</span>
+                            </a>
+                            <a href="#" class="social-btn wechat magnetic">
+                                <span class="btn-indicator"></span>
+                                <span class="btn-text">WeChat</span>
+                            </a>
                         </div>
                     </div>
+                </section>
 
-                    <div class="form-group" style="margin-top: var(--space-lg);">
-                        <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
-                        <label for="message">Technical Specifications & Material Requirements</label>
-                    </div>
-
-                    <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: var(--space-md);">
-                        <button type="submit" id="submit-btn" class="artistic-link magnetic" style="background: none; cursor: pointer; border: none; padding: 0;">
-                            <span class="btn-text">Submit Inquiry</span>
-                            <span class="arrow-circle">&rarr;</span>
-                        </button>
-                        <div id="form-loader" style="display:none; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.2em; color: var(--accent-brass); text-transform: uppercase;">
-                            Status: Initializing Protocol...
+                <!-- Right: B2B Inquiry Form -->
+                <section class="inquiry-panel">
+                    <div class="hud-header">
+                        <div class="hud-status-group">
+                            <span class="hud-status-dot"></span>
+                            <span class="hud-status-text">SECURE TRANSMISSION READY</span>
                         </div>
-                        <a href="/" class="artistic-link magnetic" style="opacity: 0.5;">
-                            Return to Main Showroom 
-                            <span class="arrow-circle">←</span>
-                        </a>
+                        <span class="hud-id">SEQ-ID: ALPHA_B2B_PROTOCOL</span>
                     </div>
-                </form>
+
+                    <form id="b2b-form" name="b2b-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="b2b-form-element">
+                        <input type="hidden" name="form-name" value="b2b-inquiry" />
+                        <p class="hidden" style="display:none;"><label>Don&rsquo;t fill this out if you're human: <input name="bot-field" /></label></p>
+                        
+                        <!-- Row 1: Name & Company -->
+                        <div class="contact-row two-cols">
+                            <div class="contact-group">
+                                <input type="text" id="name" name="name" required autocomplete="name" class="input-field" placeholder=" ">
+                                <label for="name" class="field-label">Representative Name</label>
+                                <span class="field-underline"></span>
+                            </div>
+                            <div class="contact-group">
+                                <input type="text" id="company" name="organization" required autocomplete="organization" class="input-field" placeholder=" ">
+                                <label for="company" class="field-label">Brand / Corporation</label>
+                                <span class="field-underline"></span>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Email & Technical Focus -->
+                        <div class="contact-row two-cols">
+                            <div class="contact-group">
+                                <input type="email" id="email" name="email" required autocomplete="email" class="input-field" placeholder=" ">
+                                <label for="email" class="field-label">Corporate Email</label>
+                                <span class="field-underline"></span>
+                            </div>
+                            <div class="contact-group">
+                                <div class="select-wrapper">
+                                    <select id="interest" name="interest" required class="select-field">
+                                        <option value="" disabled selected></option>
+                                        <option value="zamak">Zamak 5 (Die-Cast Logic)</option>
+                                        <option value="brass">H65 Structural Brass (Forged)</option>
+                                        <option value="steel">316L Stainless Steel (Maritime)</option>
+                                        <option value="aluminum">6061 Aerospace Aluminum</option>
+                                    </select>
+                                    <label for="interest" class="field-label select-label">Technical Focus</label>
+                                    <span class="field-underline"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: MOQ & Project Name -->
+                        <div class="contact-row two-cols">
+                            <div class="contact-group">
+                                <div class="select-wrapper">
+                                    <select id="moq" name="moq" required class="select-field">
+                                        <option value="" disabled selected></option>
+                                        <option value="sample">Proto / Sampling (Under 5,000 units)</option>
+                                        <option value="low">Small Batch (5,000 - 25,000 units)</option>
+                                        <option value="med">Mid-Scale (25,000 - 100,000 units)</option>
+                                        <option value="high">Industrial (100,000+ units)</option>
+                                    </select>
+                                    <label for="moq" class="field-label select-label">Production Volume</label>
+                                    <span class="field-underline"></span>
+                                </div>
+                            </div>
+                            <div class="contact-group">
+                                <input type="text" id="project" name="project" class="input-field" placeholder=" ">
+                                <label for="project" class="field-label">Project / Collection (Optional)</label>
+                                <span class="field-underline"></span>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Message -->
+                        <div class="contact-group msg-group">
+                            <textarea id="message" name="message" rows="4" required class="textarea-field" placeholder=" "></textarea>
+                            <label for="message" class="field-label">Technical Specs & Requirements</label>
+                            <span class="field-underline"></span>
+                            <p class="textarea-hint">Specify alloy grades, plating finishes, and mechanical stress tolerances required...</p>
+                        </div>
+
+                        <!-- Submit Actions -->
+                        <div class="form-actions">
+                            <button type="submit" id="submit-btn" class="submit-action-btn magnetic">
+                                <span class="btn-text">Transmit B2B Inquiry</span>
+                                <span class="arrow-symbol">&rarr;</span>
+                            </button>
+                            
+                            <div id="form-loader" class="form-status-loader">
+                                Status: Initializing Protocol...
+                            </div>
+                            
+                            <a href="/" class="showroom-return-link magnetic">
+                                Return to Main Showroom 
+                                <span class="arrow-back">&larr;</span>
+                            </a>
+                        </div>
+                    </form>
+                </section>
+
+            </div>
+
+            <!-- Policies Section -->
+            <section class="policies-section">
+                <div class="policies-header">
+                    <span class="policies-tag">COMPLIANCE FRAMEWORK</span>
+                    <h2 class="policies-title">Manufacturing Policies</h2>
+                </div>
+                
+                <div class="policies-grid">
+                    <div class="policy-block">
+                        <div class="policy-num">01</div>
+                        <h3>Minimum Order Quantity (MOQ)</h3>
+                        <p>To maintain peak quality control and machine calibration standards, SDAP enforces a strict Minimum Order Quantity (MOQ) of 5,000 units for standard catalogue hardware, and 15,000 units for fully bespoke 5-axis CNC molds.</p>
+                        <p>Prototypes and pre-production sampling are available exclusively to registered brand partners undergoing the onboarding process.</p>
+                    </div>
+
+                    <div class="policy-block">
+                        <div class="policy-num">02</div>
+                        <h3>Tolerances & Quality Assurance</h3>
+                        <p>All structural denim hardware is engineered to a mechanical tolerance of &plusmn;0.01 mm. Physical Vapor Deposition (PVD) and molecular anti-oxidation coatings are guaranteed to withstand class-4 industrial enzyme and stone-wash cycles without structural degradation.</p>
+                    </div>
+
+                    <div class="policy-block">
+                        <div class="policy-num">03</div>
+                        <h3>Intellectual Property & NDA</h3>
+                        <p>We respect the absolute confidentiality of our partners' designs. All bespoke mold schematics and engraved logo dies are strictly protected under mutual NDA and destroyed or securely vaulted upon collection termination.</p>
+                    </div>
+                </div>
             </section>
-
         </div>
-
-        <!-- Policies Section -->
-        <section class="policies-section">
-            <h2 style="font-family: var(--font-serif); font-size: var(--text-xl); font-style: italic; margin-bottom: var(--space-md); color:#fff;">Manufacturing Policies</h2>
-            
-            <div class="policy-block">
-                <h3>Minimum Order Quantity (MOQ)</h3>
-                <p>To maintain peak quality control and machine calibration standards, SDAP enforces a strict Minimum Order Quantity (MOQ) of 5,000&nbsp;units for standard catalogue hardware, and 15,000&nbsp;units for fully bespoke 5-axis CNC molds.</p>
-                <p>Prototypes and pre-production sampling are available exclusively to registered brand partners undergoing the onboarding process.</p>
-            </div>
-
-            <div class="policy-block">
-                <h3>Tolerances & Quality Assurance</h3>
-                <p>All structural denim hardware is engineered to a mechanical tolerance of &plusmn;0.01&nbsp;mm. Physical Vapor Deposition (PVD) and molecular anti-oxidation coatings are guaranteed to withstand class-4 industrial enzyme and stone-wash cycles without structural degradation.</p>
-            </div>
-
-            <div class="policy-block">
-                <h3>Intellectual Property & Non-Disclosure</h3>
-                <p>We respect the absolute confidentiality of our partners' designs. All bespoke mold schematics and engraved logo dies are strictly protected under mutual NDA and destroyed or securely vaulted upon collection termination.</p>
-            </div>
-        </section>
     </main>
 </Layout>
+
+<style is:global>
+    body { background: #050505; overflow-y: auto; color: #fff; }
+    
+    /* Global grid background to align with index page */
+    body::before {
+        content: ''; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+        background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 80px 80px;
+        background-position: center center;
+        z-index: -2; pointer-events: none;
+    }
+    
+    /* Hide the overlapping global watermark on the contact page */
+    .global-watermark {
+        display: none !important;
+    }
+</style>
+
+<style>
+    /* Premium Page Wrapper */
+    .contact-page-wrapper {
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Ambient Glow Effects */
+    .ambient-glow {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        filter: blur(140px);
+        pointer-events: none;
+        z-index: -1;
+        opacity: 0.15;
+    }
+    .glow-1 {
+        top: -100px;
+        right: -100px;
+        background: radial-gradient(circle, var(--accent-brass, #d4af37) 0%, rgba(0,0,0,0) 80%);
+    }
+    .glow-2 {
+        bottom: 10%;
+        left: -200px;
+        background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 80%);
+        opacity: 0.08;
+    }
+
+    /* Main Container */
+    .page-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 160px var(--space-md) var(--space-xl);
+    }
+
+    /* Hero Section */
+    .contact-hero {
+        position: relative;
+        margin-bottom: var(--space-xl);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: var(--space-md);
+    }
+    .hero-tag {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        letter-spacing: 0.3em;
+        color: var(--accent-brass, #d4af37);
+        margin-bottom: 1rem;
+    }
+    .contact-hero h1 {
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 7vw, 5.5rem);
+        font-style: italic;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        margin-bottom: var(--space-xs);
+        color: #fff;
+    }
+    .hero-subtitle {
+        font-family: var(--font-sans);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Grid Layout */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        margin-bottom: var(--space-2xl);
+        align-items: start;
+    }
+    @media (min-width: 1024px) {
+        .contact-grid {
+            grid-template-columns: 1.10fr 1.5fr;
+            gap: 6rem;
+        }
+    }
+
+    /* Left Panel: Direct Channels */
+    .info-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .panel-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .panel-section-title {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        color: var(--accent-brass, #d4af37);
+        margin-bottom: 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 0.6rem;
+        width: 100%;
+    }
+    
+    /* Glassmorphic Info Cards */
+    .info-cards-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .info-card {
+        background: rgba(255, 255, 255, 0.015);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 2rem;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    .info-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 1px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent);
+    }
+    .info-card:hover {
+        background: rgba(255, 255, 255, 0.035);
+        border-color: rgba(212, 175, 55, 0.25);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+    .card-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .card-label {
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.4);
+    }
+    .card-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .card-value {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        font-style: italic;
+        color: #fff;
+    }
+    .timezone-tag {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--accent-brass, #d4af37);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        padding: 0.15rem 0.5rem;
+        border-radius: 20px;
+        letter-spacing: 0.05em;
+    }
+    .card-subtext {
+        font-family: var(--font-sans);
+        font-size: 0.8rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Un-scrapable company name container */
+    .entity-card {
+        border-left: 2px solid rgba(255, 255, 255, 0.15);
+    }
+    .company-image-container {
+        margin-top: 0.2rem;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 0.8rem 1.2rem;
+        display: inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        max-width: 100%;
+    }
+    .legal-entity-img {
+        height: 18px;
+        width: auto;
+        display: block;
+        opacity: 0.95;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    /* Philosophy Quote */
+    .philosophy-card {
+        background: rgba(255, 255, 255, 0.01);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        padding: 2.2rem;
+        border-left: 2px solid var(--accent-brass, #d4af37);
+    }
+    .philosophy-label {
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: rgba(255, 255, 255, 0.3);
+        display: block;
+        margin-bottom: 0.8rem;
+    }
+    .philosophy-quote {
+        font-family: var(--font-serif);
+        font-size: 1.7rem;
+        font-style: italic;
+        color: #fff;
+        line-height: 1.35;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Digital Comms Buttons */
+    .social-links-grid {
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+    }
+    .social-btn {
+        flex: 1;
+        min-width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 1rem 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #fff;
+        text-decoration: none;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        background: rgba(255, 255, 255, 0.01);
+        position: relative;
+        overflow: hidden;
+    }
+    .btn-indicator {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: currentColor;
+        transition: transform 0.3s ease;
+    }
+    
+    /* Specific overrides for social buttons to blend styling natively */
+    .social-links-grid .social-btn.whatsapp {
+        border-color: rgba(37, 211, 102, 0.25);
+        color: #25D366;
+    }
+    .social-links-grid .social-btn.whatsapp:hover {
+        background: rgba(37, 211, 102, 0.06);
+        border-color: #25D366;
+        box-shadow: 0 0 20px rgba(37, 211, 102, 0.15);
+        transform: translateY(-1px);
+    }
+    
+    .social-links-grid .social-btn.wechat {
+        border-color: rgba(7, 193, 96, 0.25);
+        color: #07C160;
+    }
+    .social-links-grid .social-btn.wechat:hover {
+        background: rgba(7, 193, 96, 0.06);
+        border-color: #07C160;
+        box-shadow: 0 0 20px rgba(7, 193, 96, 0.15);
+        transform: translateY(-1px);
+    }
+
+    /* Right Panel: Inquiry Terminal Form */
+    .inquiry-panel {
+        background: rgba(10, 10, 12, 0.4);
+        padding: 2.2rem;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    @media (min-width: 768px) {
+        .inquiry-panel {
+            padding: 3.5rem;
+        }
+    }
+    .hud-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+        margin-bottom: 3.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        padding-bottom: 1rem;
+    }
+    @media (min-width: 480px) {
+        .hud-header {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .hud-status-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .hud-status-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent-brass, #d4af37);
+        animation: pulseAlpha 2s infinite ease-in-out;
+    }
+    .hud-status-text {
+        color: var(--accent-brass, #d4af37);
+    }
+    .hud-id {
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 300;
+    }
+
+    @keyframes pulseAlpha {
+        0%, 100% { opacity: 0.3; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.1); }
+    }
+
+    /* Form Layout Elements */
+    .b2b-form-element {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .contact-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+    @media (min-width: 768px) {
+        .contact-row.two-cols {
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+    }
+    
+    /* Interactive floating style input group */
+    .contact-group {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 2.2rem;
+    }
+    
+    /* The label starts above but gets styled as floating on focus */
+    .field-label {
+        position: absolute;
+        top: 0.6rem;
+        left: 0;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.35);
+        pointer-events: none;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), font-size 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        transform-origin: left top;
+    }
+    
+    /* The Input Fields */
+    .input-field {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 0.6rem 0;
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        color: #fff;
+        outline: none;
+        border-radius: 0;
+        transition: border-color 0.4s ease;
+    }
+
+    /* Focus & Value logic */
+    .input-field:focus {
+        border-bottom-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    /* Move label to active header state when input has focus OR placeholder is NOT shown (i.e. has value) */
+    .input-field:focus ~ .field-label,
+    .input-field:not(:placeholder-shown) ~ .field-label {
+        transform: translateY(-1.4rem) scale(0.8);
+        color: var(--accent-brass, #d4af37);
+        letter-spacing: 0.2em;
+    }
+
+    /* Animated expanding focus underline bar */
+    .field-underline {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background: var(--accent-brass, #d4af37);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .input-field:focus ~ .field-underline,
+    .select-field:focus ~ .field-underline,
+    .textarea-field:focus ~ .field-underline {
+        left: 0;
+        width: 100%;
+        box-shadow: 0 1px 5px rgba(212, 175, 55, 0.3);
+    }
+
+    /* Custom Styled Select */
+    .select-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .select-field {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 0.6rem 0;
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        color: #fff;
+        outline: none;
+        border-radius: 0;
+        appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+        padding-right: 24px;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 12px;
+        transition: border-color 0.4s ease, background-image 0.4s ease;
+    }
+    .select-field:focus {
+        border-bottom-color: rgba(255, 255, 255, 0.3);
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    }
+    .select-field option {
+        background-color: #0c0c0e;
+        color: #fff;
+        padding: 10px;
+    }
+    .select-field option:disabled {
+        color: rgba(255, 255, 255, 0.25);
+    }
+    
+    /* Position the label for select fields */
+    .select-label {
+        transform: translateY(-1.4rem) scale(0.8);
+        color: rgba(255, 255, 255, 0.35);
+    }
+    .select-field:focus ~ .select-label,
+    .select-field:valid ~ .select-label {
+        color: var(--accent-brass, #d4af37);
+        letter-spacing: 0.2em;
+    }
+    
+    /* Textarea styling */
+    .msg-group {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .textarea-field {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 0.6rem 0;
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        color: #fff;
+        outline: none;
+        resize: vertical;
+        min-height: 90px;
+        border-radius: 0;
+        transition: border-color 0.4s ease;
+    }
+    .textarea-field:focus {
+        border-bottom-color: rgba(255, 255, 255, 0.3);
+    }
+    .textarea-field:focus ~ .field-label,
+    .textarea-field:not(:placeholder-shown) ~ .field-label {
+        transform: translateY(-1.4rem) scale(0.8);
+        color: var(--accent-brass, #d4af37);
+        letter-spacing: 0.2em;
+    }
+    .textarea-hint {
+        font-family: var(--font-sans);
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.25);
+        margin-top: 0.5rem;
+        line-height: 1.4;
+    }
+
+    /* Form Actions & Buttons */
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    .submit-action-btn {
+        background: #fff;
+        color: #000;
+        border: none;
+        padding: 1.1rem 2.2rem;
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .submit-action-btn:hover {
+        background: var(--accent-brass, #d4af37);
+        color: #fff;
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+    }
+    .arrow-symbol {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+    }
+    .submit-action-btn:hover .arrow-symbol {
+        transform: translateX(6px);
+    }
+    
+    .form-status-loader {
+        display: none;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        color: var(--accent-brass, #d4af37);
+        text-transform: uppercase;
+        border-left: 2px solid var(--accent-brass, #d4af37);
+        padding-left: 10px;
+        margin: 0.5rem 0;
+        animation: pulseAlpha 1.5s infinite ease-in-out;
+    }
+    .showroom-return-link {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.4);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: color 0.3s ease;
+        align-self: flex-start;
+        padding: 0.3rem 0;
+    }
+    .showroom-return-link:hover {
+        color: #fff;
+    }
+    .arrow-back {
+        transition: transform 0.3s ease;
+    }
+    .showroom-return-link:hover .arrow-back {
+        transform: translateX(-5px);
+    }
+
+    /* Policies Section */
+    .policies-section {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: var(--space-xl);
+        margin-top: 2rem;
+    }
+    .policies-header {
+        margin-bottom: var(--space-lg);
+    }
+    .policies-tag {
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        letter-spacing: 0.3em;
+        color: rgba(255,255,255,0.4);
+        display: block;
+        margin-bottom: 0.8rem;
+    }
+    .policies-title {
+        font-family: var(--font-serif);
+        font-size: var(--text-xl);
+        font-style: italic;
+        font-weight: 400;
+        color: #fff;
+    }
+    .policies-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+    @media (min-width: 768px) {
+        .policies-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+    }
+    .policy-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .policy-num {
+        font-family: var(--font-serif);
+        font-size: 1.8rem;
+        font-style: italic;
+        color: var(--accent-brass, #d4af37);
+        opacity: 0.4;
+        line-height: 1;
+    }
+    .policy-block h3 {
+        font-family: var(--font-sans);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: #fff;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .policy-block p {
+        font-family: var(--font-sans);
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.7;
+        margin: 0;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Staggered Entrance Animation
+        const infoPanel = document.querySelector('.info-panel') as HTMLElement;
+        const inquiryPanel = document.querySelector('.inquiry-panel') as HTMLElement;
+        
+        if (infoPanel && inquiryPanel) {
+            infoPanel.style.opacity = '0';
+            infoPanel.style.transform = 'translateY(30px)';
+            inquiryPanel.style.opacity = '0';
+            inquiryPanel.style.transform = 'translateY(30px)';
+            
+            infoPanel.style.transition = 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.1s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.1s';
+            inquiryPanel.style.transition = 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.25s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.25s';
+            
+            requestAnimationFrame(() => {
+                infoPanel.style.opacity = '1';
+                infoPanel.style.transform = 'translateY(0)';
+                inquiryPanel.style.opacity = '1';
+                inquiryPanel.style.transform = 'translateY(0)';
+            });
+        }
+
+        // 2. Cursor Haptic Snap Classes
+        const cursor = document.querySelector('.custom-cursor');
+        const interactiveElements = document.querySelectorAll('.magnetic, input, select, textarea, button, a');
+        
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor?.classList.add('haptic-snap');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor?.classList.remove('haptic-snap');
+            });
+        });
+
+        // 3. WhatsApp & WeChat Click Constructors
+        document.querySelector('.whatsapp')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            const pt = ["86", "185", "7875", "5540"];
+            window.open("https://wa.me/" + pt.join(''), "_blank");
+        });
+
+        document.querySelector('.wechat')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            const pt = ["86", "185", "7875", "5540"];
+            window.location.href = "tel:+" + pt.join('');
+        });
+
+        // 4. Netlify Form Submission Handling
+        const b2bForm = document.getElementById('b2b-form') as HTMLFormElement;
+        const formLoader = document.getElementById('form-loader');
+
+        if (b2bForm && formLoader) {
+            b2bForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                b2bForm.style.opacity = '0.5';
+                b2bForm.style.pointerEvents = 'none';
+                formLoader.style.display = 'block';
+                formLoader.textContent = "Status: Transmitting Data...";
+
+                const formData = new FormData(b2bForm);
+                fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData as any).toString()
+                })
+                .then(() => {
+                    formLoader.textContent = "Status: Protocol Success";
+                    setTimeout(() => {
+                        window.location.href = '/success';
+                    }, 800);
+                })
+                .catch(() => {
+                    formLoader.textContent = "Status: System Error - Transmission Failed";
+                    b2bForm.style.opacity = '1';
+                    b2bForm.style.pointerEvents = 'auto';
+                });
+            });
+        }
+    });
+</script>
